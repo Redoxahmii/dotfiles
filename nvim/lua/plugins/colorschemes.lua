@@ -28,6 +28,7 @@ return {
     lazy = true,
     config = function()
       require("astrotheme").setup({
+        terminal_color = false,
         -- style = {
         --   transparent = true,
         --   neotree = true,
