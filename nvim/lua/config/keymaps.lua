@@ -9,4 +9,15 @@ vim.keymap.set("n", "<CR>", "o<Esc>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<S-Enter>", "O<Esc>", { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true })
+
+-- set keymap to use escape to exit terminal mode
+
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+
+-- set keymap to run terminal
+
+vim.api.nvim_set_keymap("n", "<C-t>", ":terminal<CR>", { noremap = true, silent = true })
+
+-- set ZenMode keymap
+vim.api.nvim_set_keymap("n", "<C-z>", ":ZenMode<CR>", { noremap = true, silent = true })
