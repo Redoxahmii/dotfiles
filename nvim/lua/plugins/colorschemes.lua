@@ -29,10 +29,10 @@ return {
     config = function()
       require("astrotheme").setup({
         terminal_color = false,
-        style = {
-          transparent = true,
-          neotree = true,
-        },
+        -- style = {
+        --   transparent = true,
+        --   neotree = true,
+        -- },
       })
     end,
   },
@@ -40,7 +40,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- INFO: Just change name of colorscheme to make any other default
-      colorscheme = "astrotheme",
+      colorscheme = "tokyonight-night",
     },
   },
 }
