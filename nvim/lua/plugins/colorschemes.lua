@@ -1,12 +1,12 @@
 return {
   {
     "folke/tokyonight.nvim",
-    opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-      },
-    },
+    -- opts = {
+    --   transparent = true,
+    --   styles = {
+    --     sidebars = "transparent",
+    --   },
+    -- },
   },
   {
     "catppuccin",
