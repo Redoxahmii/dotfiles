@@ -46,6 +46,6 @@ require("lazy").setup({
 })
 if vim.g.neovide then
   vim.o.guifont = "JetBrainsMono Nerd Font"
-  vim.g.neovide_scale_factor = 1.0
+  vim.g.neovide_scale_factor = 1.3
   vim.g.neovide_transparency = 0.8
 end

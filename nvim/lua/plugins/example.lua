@@ -8,7 +8,24 @@ if true then return {} end
 -- * add extra plugins
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
+--
+--
 return {
+  --INFO: IF using copilot again use this inside copilot.lua copilot config here
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    build = ":Copilot auth",
+    opts = {
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+      filetypes = {
+        markdown = false,
+        help = true,
+        lua = false,
+      },
+    },
+  },
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 

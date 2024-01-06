@@ -1,14 +1,18 @@
+local util = require("lspconfig.util")
+
 return {
+
   {
     "neovim/nvim-lspconfig",
     opts = {
-      inlay_hints = { enabled = true },
       servers = {
         volar = {
           filetypes = {
-            -- "typescript",
+            "typescript",
+            "javascript",
             "vue",
           },
+          root_dir = util.root_pattern("src/App.vue"),
         },
       },
     },
