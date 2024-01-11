@@ -1,6 +1,7 @@
 return {
   {
     "folke/tokyonight.nvim",
+    lazy = true,
     -- opts = {
     --   transparent = true,
     --   styles = {
@@ -9,7 +10,17 @@ return {
     -- },
   },
   {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = true,
+    opts = function()
+      return {
+        transparent = true,
+      }
+    end,
+  },
+  {
     "catppuccin",
+    lazy = true,
     -- opts = {
     --   transparent_background = true,
     -- },
@@ -28,7 +39,6 @@ return {
     lazy = true,
     config = function()
       require("astrotheme").setup({
-        terminal_color = false,
         -- style = {
         --   transparent = true,
         --   neotree = true,
