@@ -2,12 +2,12 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-      },
-    },
+    -- opts = {
+    --   transparent = true,
+    --   styles = {
+    --     sidebars = "transparent",
+    --   },
+    -- },
   },
   {
     "craftzdog/solarized-osaka.nvim",
@@ -24,9 +24,9 @@ return {
   {
     "catppuccin",
     lazy = true,
-    -- opts = {
-    --   transparent_background = true,
-    -- },
+    opts = {
+      transparent_background = true,
+    },
   },
   -- {
   --   "nobbmaestro/nvim-andromeda",
@@ -42,19 +42,18 @@ return {
     lazy = true,
     config = function()
       require("astrotheme").setup({
-        -- style = {
-        --   transparent = true,
-        --   neotree = true,
-        -- },
+        style = {
+          transparent = true,
+          neotree = false,
+        },
       })
     end,
   },
-  { "rose-pine/neovim", name = "rose-pine", lazy = true },
   {
     "LazyVim/LazyVim",
     opts = {
       -- INFO: Just change name of colorscheme to make any other default
-      colorscheme = "solarized-osaka",
+      colorscheme = "tokyonight-night",
     },
   },
 }
