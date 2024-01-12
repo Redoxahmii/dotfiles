@@ -2,20 +2,23 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    -- opts = {
-    --   transparent = true,
-    --   styles = {
-    --     sidebars = "transparent",
-    --   },
-    -- },
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+      },
+    },
   },
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = true,
-    opts = function()
-      return {
+    config = function()
+      require("solarized-osaka").setup({
         transparent = true,
-      }
+        styles = {
+          sidebars = "transparent",
+        },
+      })
     end,
   },
   {
@@ -46,11 +49,12 @@ return {
       })
     end,
   },
+  { "rose-pine/neovim", name = "rose-pine", lazy = true },
   {
     "LazyVim/LazyVim",
     opts = {
       -- INFO: Just change name of colorscheme to make any other default
-      colorscheme = "tokyonight-night",
+      colorscheme = "solarized-osaka",
     },
   },
 }
