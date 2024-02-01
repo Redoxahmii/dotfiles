@@ -11,9 +11,15 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 -- The default conceallevel is 3 in LazyVim
 -- NOTE: mardown was previously added inside json pattern
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "json", "jsonc", "markdown" },
+  pattern = { "markdown" },
   callback = function()
     vim.opt.conceallevel = 2
+  end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "json", "jsonc" },
+  callback = function()
+    vim.opt.conceallevel = 1
   end,
 })
 

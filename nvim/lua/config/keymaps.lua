@@ -22,5 +22,3 @@ vim.api.nvim_set_keymap("n", "<C-t>", ":terminal<CR>", { noremap = true, silent 
 
 -- set ZenMode keymap
 vim.api.nvim_set_keymap("n", "<C-z>", ":ZenMode<CR>", { noremap = true, silent = true })
--- make ss for using flash instead of s
-vim.keymap.set("n", "s", "", { remap = true, silent = true })

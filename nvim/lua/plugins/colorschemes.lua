@@ -2,12 +2,12 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    -- opts = {
-    --   transparent = true,
-    --   styles = {
-    --     sidebars = "transparent",
-    --   },
-    -- },
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+      },
+    },
   },
   {
     "craftzdog/solarized-osaka.nvim",
@@ -24,9 +24,9 @@ return {
   {
     "catppuccin",
     lazy = true,
-    opts = {
-      transparent_background = true,
-    },
+    -- opts = {
+    --   transparent_background = true,
+    -- },
   },
   -- {
   --   "nobbmaestro/nvim-andromeda",

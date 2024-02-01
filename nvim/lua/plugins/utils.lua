@@ -3,7 +3,7 @@ package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/shar
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
 return {
-  --- [INFO: Enable command mode suggestions]
+  -- - [INFO: Enable command mode suggestions]
   {
     "hrsh7th/nvim-cmp",
     event = { "InsertEnter", "CmdLineEnter" },
@@ -27,6 +27,12 @@ return {
             },
           },
         }),
+      })
+      cmp.setup({
+        sources = {
+          name = "nvim_lsp",
+          max_item_count = 10,
+        },
       })
     end,
   },
@@ -143,18 +149,31 @@ return {
       },
     },
   },
+
+  --- [INFO: Disable copilot for markdown]
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   build = ":Copilot auth",
+  --   opts = {
+  --     suggestion = { enabled = false },
+  --     panel = { enabled = false },
+  --     filetypes = {
+  --       markdown = false,
+  --       help = true,
+  --       lua = false,
+  --     },
+  --   },
+  -- },
   {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    build = ":Copilot auth",
-    opts = {
-      suggestion = { enabled = false },
-      panel = { enabled = false },
-      filetypes = {
-        markdown = false,
-        help = true,
-        lua = false,
-      },
+    "andrewferrier/debugprint.nvim",
+    opts = {},
+    -- Dependency only needed for NeoVim 0.8
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
     },
+    -- Remove the following line to use development versions,
+    -- not just the formal releases
+    version = "*",
   },
 }
