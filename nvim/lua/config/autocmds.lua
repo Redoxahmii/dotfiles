@@ -19,7 +19,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "json", "jsonc" },
   callback = function()
-    vim.opt.conceallevel = 1
+    vim.opt.conceallevel = 0
   end,
 })
 

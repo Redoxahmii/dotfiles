@@ -9,16 +9,16 @@
 # bold_italic_font Operator Mono Medium
 # font_family      Input Mono
 font_family      JetBrainsMono Nerd Font Mono
-bold_font        JetBrainsMono Nerd Font Mono Extra Bold
-bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
+bold_font        JetBrainsMono Nerd Font Mono SemiBold
+bold_italic_font JetBrainsMono Nerd Font Mono SemiBold Italic
 # Font size (in pts)
-font_size        14.0
+font_size        15.0
 
 # The foreground color
 # foreground      #82aaff
 
 # The background color
-# background_opacity 0.9
+ background_opacity 0.8
 # The foreground for selections
 # selection_foreground #2f2f2f
 
@@ -104,7 +104,7 @@ open_url_modifiers ctrl
 open_url_with default
 
 # The value of the TERM environment variable to set
-# term xterm-kitty
+term xterm-kitty
 
 # The width (in pts) of window borders. Will be rounded to the nearest number of pixels based on screen resolution.
 window_border_width 0
@@ -118,7 +118,8 @@ window_padding_width 0
 # Tab-bar colors
 
 tab_bar_style powerline
-
+window_border_width 0.5pt
+window_padding_width 1
 # The 16 terminal colors. There are 8 basic colors, each color has a dull and
 # bright version.
 
@@ -160,7 +161,7 @@ tab_bar_style powerline
 # You can use the special action no_op to unmap a keyboard shortcut that is
 # assigned in the default configuration.
 
-enabled_layouts fat:bias=85;full_size=1;mirrored=false
+enabled_layouts fat:bias=80;full_size=1;mirrored=false
 #borders for windows 
 
 window_margin_width 0
@@ -201,8 +202,8 @@ map ctrl+shift+7        seventh_window
 map ctrl+shift+8        eighth_window
 map ctrl+shift+9        ninth_window
 map ctrl+shift+0        tenth_window
-map ctrl+[ layout_action decrease_num_full_size_windows
-map ctrl+] layout_action increase_num_full_size_windows
+map ctrl+] layout_action decrease_num_full_size_windows
+map ctrl+[ layout_action increase_num_full_size_windows
 
 # Tab management
 map ctrl+shift+right    next_tab
@@ -247,7 +248,22 @@ map kitty_mod+enter new_window_with_cwd
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
-#  include current-theme.conf
+# Adwaita dark
+include current-theme.conf
 # END_KITTY_THEME
  # background      #1e1e1e
+
+# Kitty-scrollback.nvim integration
+
+  allow_remote_control yes
+ listen_on unix:/tmp/kitty
+ shell_integration enabled no-cursor
+
+# kitty-scrollback.nvim Kitten alias
+action_alias kitty_scrollback_nvim kitten $HOME/.local/share/nvim/lazy/kitty-scrollback.nvim/python/kitty_scrollback_nvim.py --nvim-args --clean --noplugin -n --cmd "let mapleader=' '"
+# Browse scrollback buffer in nvim
+map kitty_mod+h kitty_scrollback_nvim
+# Browse output of the last shell command in nvim
+map kitty_mod+g kitty_scrollback_nvim --config ksb_builtin_last_cmd_output
+# Show clicked command output in nvim
+mouse_map kitty_mod+right press ungrabbed combine : mouse_select_command_output : kitty_scrollback_nvim --config ksb_builtin_last_visited_cmd_output
