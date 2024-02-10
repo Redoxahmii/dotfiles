@@ -42,10 +42,10 @@ return {
     lazy = true,
     config = function()
       require("astrotheme").setup({
-        style = {
-          transparent = true,
-          neotree = false,
-        },
+        -- style = {
+        --   transparent = true,
+        --   neotree = false,
+        -- },
       })
     end,
   },
