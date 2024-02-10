@@ -88,18 +88,18 @@ return {
     end,
   },
   --- [INFO: kitty-scrollback]
-  {
-    "mikesmithgh/kitty-scrollback.nvim",
-    enabled = true,
-    lazy = true,
-    cmd = { "KittyScrollbackGenerateKittens", "KittyScrollbackCheckHealth" },
-    event = { "User KittyScrollbackLaunch" },
-    -- version = "*", -- latest stable version, may have breaking changes if major version changed
-    version = "^3.0.0", -- pin major version, include fixes and features that do not have breaking changes
-    config = function()
-      require("kitty-scrollback").setup({})
-    end,
-  },
+  -- {
+  --   "mikesmithgh/kitty-scrollback.nvim",
+  --   enabled = true,
+  --   lazy = true,
+  --   cmd = { "KittyScrollbackGenerateKittens", "KittyScrollbackCheckHealth" },
+  --   event = { "User KittyScrollbackLaunch" },
+  --   -- version = "*", -- latest stable version, may have breaking changes if major version changed
+  --   version = "^3.0.0", -- pin major version, include fixes and features that do not have breaking changes
+  --   config = function()
+  --     require("kitty-scrollback").setup({})
+  --   end,
+  -- },
   --- [INFO: Obsidian Notes]
   {
     "epwalsh/obsidian.nvim",
@@ -166,8 +166,21 @@ return {
   --   },
   -- },
   --
+  --- [INFO: disable bigfile things]
   {
     "LunarVim/bigfile.nvim",
     opts = {},
+  },
+
+  --- [INFO: vim-tmux navigation]
+  {
+    "christoomey/vim-tmux-navigator",
+    keys = {
+      { "<C-\\>", "<cmd>TmuxNavigatePrevious<cr>", desc = "Go to the previous pane" },
+      { "<C-h>", "<cmd>TmuxNavigateLeft<cr>", desc = "Got to the left pane" },
+      { "<C-j>", "<cmd>TmuxNavigateDown<cr>", desc = "Got to the down pane" },
+      { "<C-k>", "<cmd>TmuxNavigateUp<cr>", desc = "Got to the up pane" },
+      { "<C-l>", "<cmd>TmuxNavigateRight<cr>", desc = "Got to the right pane" },
+    },
   },
 }
