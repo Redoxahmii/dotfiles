@@ -21,5 +21,6 @@ alias tmxls="tmuxifier list-sessions"
 alias tmxn="tmuxifier new-session"
 alias tmxl="tmuxifier load-session"
 alias tmxe="tmuxifier edit-session"
+alias e="exit"
 # INFO: These are the plugins to use in zsh
 # plugins=(git zsh-syntax-highlighting zsh-autosuggestions npm zsh-autocomplete tmux)

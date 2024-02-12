@@ -106,7 +106,7 @@ return {
     version = "*", -- recommended, use latest release instead of latest commit
     lazy = true,
     cmd = "ObsidianQuickSwitch",
-
+    ft = "markdown",
     keys = {
       { "<leader>wW", mode = "n", "<cmd>ObsidianQuickSwitch<cr>", desc = "Obsidian Notes" },
     },
