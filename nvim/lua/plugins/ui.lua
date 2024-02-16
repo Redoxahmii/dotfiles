@@ -3,7 +3,7 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      background_colour = "#000000",
+      -- background_colour = "#000000",
       timeout = 5000,
     },
   },
@@ -11,7 +11,7 @@ return {
   {
     "folke/noice.nvim",
     opts = function(_, opts)
-      opts.presets.lsp_doc_border = true
+      -- opts.presets.lsp_doc_border = true
       table.insert(opts.routes, {
         filter = {
           event = "notify",
