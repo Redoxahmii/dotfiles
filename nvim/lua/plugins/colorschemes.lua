@@ -11,15 +11,13 @@ return {
   },
   {
     "craftzdog/solarized-osaka.nvim",
-    lazy = true,
-    config = function()
-      require("solarized-osaka").setup({
-        transparent = true,
-        styles = {
-          sidebars = "transparent",
-        },
-      })
-    end,
+    lazy = false,
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+      },
+    },
   },
   {
     "catppuccin",
@@ -37,23 +35,14 @@ return {
   --     require("andromeda").setup()
   --   end,
   -- },
+  { "EdenEast/nightfox.nvim" },
   {
-    "AstroNvim/astrotheme",
-    lazy = true,
-    config = function()
-      require("astrotheme").setup({
-        -- style = {
-        --   transparent = true,
-        --   neotree = false,
-        -- },
-      })
-    end,
+    "Tsuzat/NeoSolarized.nvim",
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      -- INFO: Just change name of colorscheme to make any other default
-      colorscheme = "tokyonight-night",
+      colorscheme = "solarized-osaka",
     },
   },
 }

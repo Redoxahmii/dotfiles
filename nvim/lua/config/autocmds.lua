@@ -17,6 +17,13 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 2
   end,
 })
+
+-- write a autocmd for the above keymap
+-- vim.api.nvim_create_autocmd("VimEnter", {
+--   pattern = "*",
+--   command = "lua require('persistence').load()",
+-- })
+
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "json", "jsonc" },
   callback = function()

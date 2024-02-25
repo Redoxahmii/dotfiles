@@ -1,6 +1,8 @@
 export QT_QPA_PLATFORMTHEME=qt5ct
 export ANDROID_HOME=$HOME/Android/Sdk
 
+alias wscreenkey="GDK_BACKEND=x11 screenkey"
+
 tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
 export PATH=$PATH:$ANDROID_HOME/emulator
