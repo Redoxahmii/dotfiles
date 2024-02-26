@@ -4,13 +4,16 @@
 # bold/italic/bold-italic variants. By default they are derived automatically,
 # by the OSes font system. Setting them manually is useful for font families
 # that have many weight variants like Book, Medium, Thick, etc. For example:
-# font_family Operator Mono Book
-# bold_font Operator Mono Thick
-# bold_italic_font Operator Mono Medium
-# font_family      Input Mono
+# bold_font auto
+# font_family GeistMono Nerd Font
+# italic_font auto
+# bold_italic_font auto
+ 
 font_family      JetBrainsMono Nerd Font Mono
-bold_font        JetBrainsMono Nerd Font Mono SemiBold
-bold_italic_font JetBrainsMono Nerd Font Mono SemiBold Italic
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+
 # Font size (in pts)
 font_size        15.0
 
@@ -18,7 +21,7 @@ font_size        15.0
 # foreground      #82aaff
 
 # The background color
- background_opacity 0.8
+ background_opacity 0.4
 # The foreground for selections
 # selection_foreground #2f2f2f
 
@@ -108,6 +111,7 @@ term xterm-kitty
 
 # The width (in pts) of window borders. Will be rounded to the nearest number of pixels based on screen resolution.
 window_border_width 0
+single_window_padding_width -1
 window_margin_width 0
 window_padding_width 0
 
@@ -118,8 +122,8 @@ window_padding_width 0
 # Tab-bar colors
 
 tab_bar_style powerline
-window_border_width 0.5pt
-window_padding_width 1
+# window_border_width 0.5pt
+# window_padding_width 1
 # The 16 terminal colors. There are 8 basic colors, each color has a dull and
 # bright version.
 
@@ -173,47 +177,47 @@ map super+c             copy_to_clipboard
 map shift+insert        paste_from_selection
 
 # Scrolling
-map ctrl+shift+up        scroll_line_up
-map ctrl+shift+down      scroll_line_down
-map ctrl+shift+k         scroll_line_up
-map ctrl+shift+j         scroll_line_down
-map ctrl+shift+page_up   scroll_page_up
-map ctrl+shift+page_down scroll_page_down
-map ctrl+shift+home      scroll_home
-map ctrl+shift+end       scroll_end
-map ctrl+shift+h         show_scrollback
+# map ctrl+shift+up        scroll_line_up
+# map ctrl+shift+down      scroll_line_down
+# map ctrl+shift+k         scroll_line_up
+# map ctrl+shift+j         scroll_line_down
+# map ctrl+shift+page_up   scroll_page_up
+# map ctrl+shift+page_down scroll_page_down
+# map ctrl+shift+home      scroll_home
+# map ctrl+shift+end       scroll_end
+# map ctrl+shift+h         show_scrollback
 
 # Window management
-map super+n             new_os_window
-map super+w             close_window
-map ctrl+shift+enter    new_window
-map ctrl+shift+]        next_window
-map ctrl+shift+[        previous_window
-map ctrl+shift+f        move_window_forward
-map ctrl+shift+b        move_window_backward
-map ctrl+shift+`        move_window_to_top
-map ctrl+shift+1        first_window
-map ctrl+shift+2        second_window
-map ctrl+shift+3        third_window
-map ctrl+shift+4        fourth_window
-map ctrl+shift+5        fifth_window
-map ctrl+shift+6        sixth_window
-map ctrl+shift+7        seventh_window
-map ctrl+shift+8        eighth_window
-map ctrl+shift+9        ninth_window
-map ctrl+shift+0        tenth_window
-map ctrl+] layout_action decrease_num_full_size_windows
-map ctrl+[ layout_action increase_num_full_size_windows
+# map super+n             new_os_window
+# map super+w             close_window
+# map ctrl+shift+enter    new_window
+# map ctrl+shift+]        next_window
+# map ctrl+shift+[        previous_window
+# map ctrl+shift+f        move_window_forward
+# map ctrl+shift+b        move_window_backward
+# map ctrl+shift+`        move_window_to_top
+# map ctrl+shift+1        first_window
+# map ctrl+shift+2        second_window
+# map ctrl+shift+3        third_window
+# map ctrl+shift+4        fourth_window
+# map ctrl+shift+5        fifth_window
+# map ctrl+shift+6        sixth_window
+# map ctrl+shift+7        seventh_window
+# map ctrl+shift+8        eighth_window
+# map ctrl+shift+9        ninth_window
+# map ctrl+shift+0        tenth_window
+# map ctrl+] layout_action decrease_num_full_size_windows
+# map ctrl+[ layout_action increase_num_full_size_windows
 
 # Tab management
-map ctrl+shift+right    next_tab
-map ctrl+shift+left     previous_tab
-map ctrl+shift+t        new_tab
-map ctrl+shift+q        close_tab
-map ctrl+shift+l        next_layout
-map ctrl+shift+.        move_tab_forward
-map ctrl+shift+,        move_tab_backward
-
+# map ctrl+shift+right    next_tab
+# map ctrl+shift+left     previous_tab
+# map ctrl+shift+t        new_tab
+# map ctrl+shift+q        close_tab
+# map ctrl+shift+l        next_layout
+# map ctrl+shift+.        move_tab_forward
+# map ctrl+shift+,        move_tab_backward
+#
 # Miscellaneous
 map ctrl+shift+up      increase_font_size
 map ctrl+shift+down    decrease_font_size
@@ -232,7 +236,7 @@ map ctrl+shift+backspace restore_font_size
 # For example:
 #
 #symbol_map U+E0A0-U+E0A2,U+E0B0-U+E0B3 PowerlineSymbols
-hide_window_decorations titlebar-and-corners
+hide_window_decorations yes
 linux_display_server x11
 macos_option_as_alt no
 

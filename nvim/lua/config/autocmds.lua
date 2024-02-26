@@ -1,8 +1,8 @@
 -- Autocmds are automatically loaded on the VeryLazy event
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
-
--- Turn off paste mode when leaving insert
+--
+-- INFO : Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = "*",
   command = "set nopaste",
@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 -- Disable the concealing in some file formats
 -- The default conceallevel is 3 in LazyVim
--- NOTE: mardown was previously added inside json pattern
+-- INFO : mardown was previously added inside json pattern
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", ".md" },
   callback = function()
@@ -18,7 +18,17 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- write a autocmd for the above keymap
+-- vim.api.nvim_create_autocmd("LspAttach", {
+--   group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+--   callback = function(args)
+--     local client = vim.lsp.get_client_by_id(args.data.client_id)
+--     if client.server_capabilities.inlayHintProvider then
+--       vim.lsp.inlay_hint.enable(args.buf, true)
+--     end
+--     -- whatever other lsp config you want
+--   end,
+-- })
+-- INFO:  autcmd for restoring session auto
 -- vim.api.nvim_create_autocmd("VimEnter", {
 --   pattern = "*",
 --   command = "lua require('persistence').load()",
@@ -31,7 +41,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- LSP Conflict VUEJS
+-- INFO: LSP Conflict VUEJS
 local lsp_conficts, _ = pcall(vim.api.nvim_get_autocmds, { group = "LspAttach_conflicts" })
 if not lsp_conficts then
   vim.api.nvim_create_augroup("LspAttach_conflicts", {})

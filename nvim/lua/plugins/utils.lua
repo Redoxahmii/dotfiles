@@ -87,7 +87,7 @@ return {
   --- [INFO: Allow Vue volar to attach properly]
   {
     "neovim/nvim-lspconfig",
-    inlay_hints = { enabled = true },
+    -- inlay_hints = { enabled = true },
     opts = {
       servers = {
         volar = {
@@ -137,22 +137,6 @@ return {
       },
     },
   },
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   opts = {
-  -- inlay_hints = { enabled = true },
-  --     servers = {
-  --       volar = {
-  --         filetypes = {
-  --           "typescript",
-  --           "javascript",
-  --           "vue",
-  --         },
-  --         root_dir = util.root_pattern("src/App.vue"),
-  --       },
-  --     },
-  --   },
-  -- },
   --- [INFO: Image preview]
   {
     "3rd/image.nvim",
@@ -272,4 +256,17 @@ return {
 
   --- [INFO: Wakatime dashboard plugin]
   { "wakatime/vim-wakatime", lazy = false },
+  --- [INFO: undotree]
+  {
+    "mbbill/undotree",
+    lazy = true,
+    cmd = "UndotreeToggle",
+    keys = {
+      {
+        "<leader>uu",
+        "<CMD>UndotreeToggle<CR>",
+        desc = "Undo Tree",
+      },
+    },
+  },
 }

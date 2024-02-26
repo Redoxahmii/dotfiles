@@ -11,7 +11,7 @@ return {
   {
     "folke/noice.nvim",
     opts = function(_, opts)
-      -- opts.presets.lsp_doc_border = true
+      opts.presets.lsp_doc_border = true
       table.insert(opts.routes, {
         filter = {
           event = "notify",
@@ -92,5 +92,15 @@ return {
       end
       return opts
     end,
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    event = "VeryLazy",
+    opts = {
+      options = {
+        -- globalstatus = false,
+        theme = "solarized_dark",
+      },
+    },
   },
 }
