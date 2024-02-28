@@ -73,11 +73,6 @@ return {
   {
     "telescope.nvim",
     dependencies = {
-      {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        build = "make",
-      },
-
       "nvim-telescope/telescope-file-browser.nvim",
     },
     optional = true,
@@ -161,7 +156,6 @@ return {
         },
       }
       telescope.setup(opts)
-      require("telescope").load_extension("fzf")
       require("telescope").load_extension("file_browser")
     end,
     keys = {
@@ -181,7 +175,7 @@ return {
             hidden = true,
             grouped = true,
             previewer = false,
-            initial_mode = "normal",
+            initial_mode = "insert",
             layout_config = { height = 40 },
           })
         end,
@@ -196,7 +190,7 @@ return {
             hidden = true,
             grouped = true,
             previewer = false,
-            initial_mode = "normal",
+            initial_mode = "insert",
             layout_config = { height = 40 },
           })
         end,

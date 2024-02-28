@@ -12,6 +12,7 @@ return {
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = false,
+    priority = 1000,
     opts = {
       transparent = true,
       styles = {
@@ -37,9 +38,6 @@ return {
   --   end,
   -- },
   { "EdenEast/nightfox.nvim" },
-  {
-    "Tsuzat/NeoSolarized.nvim",
-  },
   {
     "LazyVim/LazyVim",
     opts = {
