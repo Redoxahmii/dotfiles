@@ -27,7 +27,10 @@ require("lazy").setup({
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
-  checker = { enabled = true }, -- automatically check for plugin updates
+  checker = {
+    enabled = true,
+    frequency = 604800, -- check once in 3 day
+  }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
@@ -44,3 +47,8 @@ require("lazy").setup({
     },
   },
 })
+if vim.g.neovide then
+  vim.o.guifont = "JetBrainsMono Nerd Font"
+  vim.g.neovide_scale_factor = 1.4
+  vim.g.neovide_transparency = 0.6
+end

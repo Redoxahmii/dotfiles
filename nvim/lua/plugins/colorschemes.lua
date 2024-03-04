@@ -1,11 +1,12 @@
 return {
   {
     "folke/tokyonight.nvim",
-    lazy = true,
+    lazy = false,
     opts = {
       transparent = true,
       styles = {
         sidebars = "transparent",
+        floats = "transparent",
       },
     },
   },
@@ -37,7 +38,6 @@ return {
   --     require("andromeda").setup()
   --   end,
   -- },
-  { "EdenEast/nightfox.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {

@@ -5,6 +5,7 @@ return {
     opts = {
       background_colour = "#000000",
       timeout = 5000,
+      render = "wrapped-compact",
     },
   },
   --- [INFO: Disable K hover command prompt]
@@ -96,9 +97,8 @@ return {
   -- [INFO: Incline]
   {
     "b0o/incline.nvim",
-    dependencies = { "craftzdog/solarized-osaka.nvim" },
     event = "BufReadPre",
-    priority = 1200,
+    lazy = true,
     config = function()
       -- local colors = require("solarized-osaka.colors").setup()
       require("incline").setup({
