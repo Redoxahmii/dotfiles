@@ -15,8 +15,18 @@ return {
   --     },
   --   },
   -- },
+  {
+    dir = "~/Code/Neovim/solarized-osaka.nvim/",
+    opts = {
+      transparent = true,
+      styles = {
+        floats = "transparent",
+        sidebars = "transparent",
+      },
+    },
+  },
   -- {
-  --   dir = "~/Code/Neovim/solarized-osaka.nvim/",
+  --   dir = "~/Code/Neovim/tokyonight.nvim/",
   --   opts = {
   --     transparent = true,
   --     styles = {
@@ -25,24 +35,6 @@ return {
   --     },
   --   },
   -- },
-  {
-    "Redoxahmii/json-to-ts.nvim",
-    build = "sh install.sh npm",
-    lazy = true,
-    ft = "json",
-    keys = {
-      {
-        "<leader>cu",
-        "<CMD>ConvertJSONtoTS<CR>",
-        desc = "Convert JSON to TS",
-      },
-      {
-        "<leader>ct",
-        "<CMD>ConvertJSONtoTSBuffer<CR>",
-        desc = "Convert JSON to TS Buffer",
-      },
-    },
-  },
   {
     "folke/flash.nvim",
     opts = {

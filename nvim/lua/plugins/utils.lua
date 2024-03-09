@@ -3,7 +3,7 @@ package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/shar
 package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
 return {
-  -- - [INFO: Enable command mode suggestions]
+  --- [INFO: Enable command mode suggestions]
   {
     "hrsh7th/nvim-cmp",
     event = { "InsertEnter", "CmdLineEnter" },
@@ -62,7 +62,7 @@ return {
             "javascript",
             "vue",
           },
-          root_dir = util.root_pattern("src/App.vue"),
+          root_dir = util.root_pattern("src/App.vue", "app.vue"),
         },
         lua_ls = {
           settings = {
@@ -223,9 +223,6 @@ return {
     },
   },
 
-  --- [INFO: Wakatime dashboard plugin]
-  { "wakatime/vim-wakatime", lazy = false },
-
   --- [INFO: undotree]
   {
     "mbbill/undotree",
@@ -299,4 +296,26 @@ return {
       },
     },
   },
+  --- [INFO: JSON to TS]
+  {
+    "Redoxahmii/json-to-ts.nvim",
+    build = "sh install.sh npm",
+    lazy = true,
+    ft = "json",
+    keys = {
+      {
+        "<leader>cu",
+        "<CMD>ConvertJSONtoTS<CR>",
+        desc = "Convert JSON to TS",
+      },
+      {
+        "<leader>ct",
+        "<CMD>ConvertJSONtoTSBuffer<CR>",
+        desc = "Convert JSON to TS Buffer",
+      },
+    },
+  },
+
+  --- [INFO: Wakatime dashboard plugin]
+  { "wakatime/vim-wakatime", lazy = false },
 }

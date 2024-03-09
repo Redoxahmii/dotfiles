@@ -35,11 +35,6 @@ return {
     },
     opts = {},
   },
-  --- [INFO: ZenMode]
-  {
-    "folke/zen-mode.nvim",
-    opts = {},
-  },
   --- [INFO: mason ensure install]
   {
     "williamboman/mason.nvim",
@@ -165,6 +160,7 @@ return {
       require("telescope").load_extension("file_browser")
     end,
     keys = {
+      { "<leader>sR", false },
       {
         "<space>wq",
         function()
@@ -203,50 +199,5 @@ return {
         desc = "file borwser at cwd",
       },
     },
-  },
-
-  --- [INFO: Change animation time]
-  {
-    "echasnovski/mini.animate",
-    event = "VeryLazy",
-    opts = function()
-      -- don't use animate when scrolling with the mouse
-      local mouse_scrolled = false
-      for _, scroll in ipairs({ "Up", "Down" }) do
-        local key = "<ScrollWheel" .. scroll .. ">"
-        vim.keymap.set({ "", "i" }, key, function()
-          mouse_scrolled = true
-          return key
-        end, { expr = true })
-      end
-
-      local animate = require("mini.animate")
-      return {
-        -- cursor = {
-        --   enable = true,
-        --   timing = animate.gen_timing.linear({ duration = 100, unit = "total" }),
-        --   path = animate.gen_path.line({
-        --     predicate = function()
-        --       return true
-        --     end,
-        --   }),
-        -- },
-        resize = {
-          timing = animate.gen_timing.linear({ duration = 100, unit = "total" }),
-        },
-        scroll = {
-          timing = animate.gen_timing.linear({ duration = 100, unit = "total" }),
-          subscroll = animate.gen_subscroll.equal({
-            predicate = function(total_scroll)
-              if mouse_scrolled then
-                mouse_scrolled = false
-                return false
-              end
-              return total_scroll > 1
-            end,
-          }),
-        },
-      }
-    end,
   },
 }
