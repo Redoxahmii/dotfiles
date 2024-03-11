@@ -1,6 +1,5 @@
 #!/bin/bash
 
-yay -Syy
 yay -S oh-my-zsh-git --noconfirm
 cp /usr/share/oh-my-zsh/zshrc ~/.zshrc
 yay -S zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete-git zsh-theme-powerlevel10k-git --noconfirm
