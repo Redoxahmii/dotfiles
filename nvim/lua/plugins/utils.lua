@@ -107,7 +107,16 @@ return {
   {
     "3rd/image.nvim",
     lazy = true,
-    keys = { { "<leader>uI", mode = "n", desc = "Enable Images" } },
+    keys = {
+      {
+        "<leader>uI",
+        function()
+          vim.notify("Image Preview Enabled!")
+        end,
+        mode = "n",
+        desc = "Enable Images",
+      },
+    },
     opts = function()
       require("image").setup({
         backend = "kitty",

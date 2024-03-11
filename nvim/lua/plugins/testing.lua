@@ -25,16 +25,6 @@ return {
       },
     },
   },
-  -- {
-  --   dir = "~/Code/Neovim/tokyonight.nvim/",
-  --   opts = {
-  --     transparent = true,
-  --     styles = {
-  --       floats = "transparent",
-  --       sidebars = "transparent",
-  --     },
-  --   },
-  -- },
   {
     "folke/flash.nvim",
     opts = {

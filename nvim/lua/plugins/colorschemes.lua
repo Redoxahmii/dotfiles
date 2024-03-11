@@ -1,7 +1,7 @@
 return {
   {
     "folke/tokyonight.nvim",
-    lazy = false,
+    lazy = true,
     opts = {
       transparent = true,
       styles = {
@@ -42,19 +42,6 @@ return {
   --     },
   --   },
   -- },
-  {
-    "Tsuzat/NeoSolarized.nvim",
-    lazy = true,
-    priority = 1000,
-    opts = {},
-  },
-  {
-    "catppuccin",
-    lazy = true,
-    -- opts = {
-    --   transparent_background = true,
-    -- },
-  },
   -- {
   --   "nobbmaestro/nvim-andromeda",
   --   dependencies = {
