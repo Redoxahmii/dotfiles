@@ -15,25 +15,25 @@ return {
   --     },
   --   },
   -- },
-  {
-    dir = "~/Code/Neovim/solarized-osaka.nvim/",
-    opts = {
-      transparent = true,
-      styles = {
-        floats = "transparent",
-        sidebars = "transparent",
-      },
-    },
-  },
-  {
-    "folke/flash.nvim",
-    opts = {
-      highlight = {
-        groups = {
-          match = "FlashCurrent",
-          label = "FlashMatch",
-        },
-      },
-    },
-  },
+  -- {
+  --   dir = "~/Code/Neovim/solarized-osaka.nvim/",
+  --   opts = {
+  --     transparent = true,
+  --     styles = {
+  --       floats = "transparent",
+  --       sidebars = "transparent",
+  --     },
+  --   },
+  -- },
+  -- {
+  --   "folke/flash.nvim",
+  --   opts = {
+  --     highlight = {
+  --       groups = {
+  --         match = "FlashCurrent",
+  --         label = "FlashMatch",
+  --       },
+  --     },
+  --   },
+  -- },
 }
