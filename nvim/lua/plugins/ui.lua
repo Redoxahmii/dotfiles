@@ -100,14 +100,7 @@ return {
     event = "BufReadPre",
     lazy = true,
     config = function()
-      -- local colors = require("solarized-osaka.colors").setup()
       require("incline").setup({
-        -- highlight = {
-        --   groups = {
-        --     InclineNormal = { guibg = colors.magenta500, guifg = colors.base04 },
-        --     InclineNormalNC = { guifg = colors.violet500, guibg = colors.base03 },
-        --   },
-        -- },
         window = { margin = { vertical = 0, horizontal = 1 } },
         hide = {
           cursorline = true,

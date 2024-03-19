@@ -36,12 +36,12 @@ return {
       })
     end,
   },
-  --- [INFO: Comment with <leader>cc]
+  --- [INFO: Comment with <leader>cw]
   {
     "danymat/neogen",
     keys = {
       {
-        "<leader>cc",
+        "<leader>cw",
         function()
           require("neogen").generate({})
         end,

@@ -1,4 +1,5 @@
 return {
+  --- [INFO: Add tokyonight with transparent sidebars and floats]
   {
     "folke/tokyonight.nvim",
     lazy = true,
@@ -10,6 +11,7 @@ return {
       },
     },
   },
+  --- [INFO: Add rainbow markdown colors to solarized-osaka]
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = true,
