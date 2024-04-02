@@ -15,25 +15,11 @@ return {
   --     },
   --   },
   -- },
-  -- {
-  --   dir = "~/Code/Neovim/solarized-osaka.nvim/",
-  --   opts = {
-  --     transparent = true,
-  --     styles = {
-  --       floats = "transparent",
-  --       sidebars = "transparent",
-  --     },
-  --   },
-  -- },
-  -- {
-  --   "folke/flash.nvim",
-  --   opts = {
-  --     highlight = {
-  --       groups = {
-  --         match = "FlashCurrent",
-  --         label = "FlashMatch",
-  --       },
-  --     },
-  --   },
+  {
+    "fei6409/log-highlight.nvim",
+    config = function()
+      require("log-highlight").setup({})
+    end,
+  },
   -- },
 }

@@ -10,14 +10,18 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools
 
 export PATH=$PATH:$HOME/.config/tmux/plugins/tmuxifier/bin
+alias sudoedit='sudo -e'
+
 eval "$(tmuxifier init -)"
 export EDITOR=nvim
 alias vim=nvim
 alias w=nvim
+alias gedit=gnome-text-editor
 alias dotfiles="cd ~/git-pkg/dotfiles/"
 alias clr=clear
 alias fm=ranger
 alias kittyconf="nvim ~/.config/kitty/kitty.conf"
+alias hyprconf="nvim ~/.config/hypr/hyprland.conf"
 alias tmx="tmuxifier"
 alias tmxls="tmuxifier list-sessions"
 alias tmxn="tmuxifier new-session"

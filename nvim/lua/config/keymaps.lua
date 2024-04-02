@@ -17,3 +17,4 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = 
 
 -- set keymap to run terminal
 vim.api.nvim_set_keymap("n", "<C-t>", ":terminal<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("c", "<leader>wt", "<esc>:lua require'utils'.sudo_write()<CR>", { silent = true })

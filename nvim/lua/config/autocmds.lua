@@ -13,6 +13,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*.zsh",
   command = "set ft=bash",
 })
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "hyprland.conf",
+  command = "set ft=hyprlang",
+})
 
 -- INFO : mardown was previously added inside json pattern
 vim.api.nvim_create_autocmd("FileType", {

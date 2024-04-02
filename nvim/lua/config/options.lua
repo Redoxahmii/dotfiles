@@ -4,3 +4,4 @@
 
 vim.opt.jumpoptions = "stack"
 vim.opt.diffopt = "vertical"
+vim.opt.fillchars = { eob = " " }
