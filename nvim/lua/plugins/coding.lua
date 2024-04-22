@@ -61,6 +61,7 @@ return {
       ensure_installed = {
         "javascript",
         "typescript",
+        "tsx",
         "css",
         "gitignore",
         "http",
@@ -158,6 +159,7 @@ return {
       }
       telescope.setup(opts)
       require("telescope").load_extension("file_browser")
+      -- require("telescope").load_extension("rest")
     end,
     keys = {
       { "<leader>sR", false },

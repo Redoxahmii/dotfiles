@@ -1,6 +1,7 @@
 return {
   -- {
-  --   dir = "~/Code/Neovim/json-to-ts.nvim/",
+  --   dir = "~/Code/Neovim/json-to-types.nvim/",
+  --   branch = "master",
   --   build = "sh install.sh npm",
   --   keys = {
   --     {
@@ -14,12 +15,5 @@ return {
   --       desc = "Convert JSON to TS Buffer",
   --     },
   --   },
-  -- },
-  {
-    "fei6409/log-highlight.nvim",
-    config = function()
-      require("log-highlight").setup({})
-    end,
-  },
   -- },
 }

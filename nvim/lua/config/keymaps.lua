@@ -10,6 +10,7 @@ vim.keymap.set("n", "<CR>", "o<Esc>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<S-Enter>", "O<Esc>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "d", '"dd', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "d", '"dd', { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true, silent = true })
 
 -- set keymap to use escape to exit terminal mode
