@@ -1,11 +1,13 @@
-export QT_QPA_PLATFORMTHEME=qt5ct
-export ANDROID_HOME=$HOME/Android/Sdk
+# export QT_QPA_PLATFORMTHEME=qt5ct
+# export ANDROID_HOME=$HOME/Android/Sdk
 
-export PATH=$PATH:$ANDROID_HOME/emulator
+# tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
 
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/emulator
+#
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+#
+# export PATH=$PATH:$ANDROID_HOME/tools
 
 export PATH=$PATH:$HOME/.config/tmux/plugins/tmuxifier/bin
 alias sudoedit='sudo -e'
@@ -17,6 +19,7 @@ alias w=nvim
 alias gedit=gnome-text-editor
 alias dotfiles="cd ~/git-pkg/dotfiles/"
 alias clr=clear
+alias c=clear
 alias fm=ranger
 alias kittyconf="nvim ~/.config/kitty/kitty.conf"
 alias hyprconf="nvim ~/.config/hypr/hyprland.conf"

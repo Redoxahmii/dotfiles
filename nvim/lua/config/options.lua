@@ -4,5 +4,6 @@
 
 vim.opt.jumpoptions = "stack"
 vim.opt.scrolloff = 10
-vim.opt.diffopt = "vertical"
-vim.opt.fillchars = { eob = " " }
+-- vim.opt.diffopt = "vertical"
+-- vim.opt.fillchars = { eob = " " }
+-- vim.g.autoformat = false

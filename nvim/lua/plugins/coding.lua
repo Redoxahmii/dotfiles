@@ -76,6 +76,8 @@ return {
     "telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-file-browser.nvim",
+      "nvim-telescope/telescope-fzf-native.nvim",
+      "nvim-tree/nvim-web-devicons",
     },
     optional = true,
     opts = function(_, opts)
@@ -159,7 +161,7 @@ return {
       }
       telescope.setup(opts)
       require("telescope").load_extension("file_browser")
-      -- require("telescope").load_extension("rest")
+      require("telescope").load_extension("fzf")
     end,
     keys = {
       { "<leader>sR", false },

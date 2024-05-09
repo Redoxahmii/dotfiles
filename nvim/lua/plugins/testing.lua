@@ -16,4 +16,9 @@ return {
   --     },
   --   },
   -- },
+  --
+  -- {
+  --   "jesseleite/nvim-macroni",
+  --   opts = {},
+  -- },
 }
