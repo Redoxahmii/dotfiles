@@ -1,13 +1,11 @@
 # export QT_QPA_PLATFORMTHEME=qt5ct
-# export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_HOME=$HOME/Android/Sdk
 
-# tre() { command tre "$@" -e && source "/tmp/tre_aliases_$USER" 2>/dev/null; }
+export PATH=$PATH:$ANDROID_HOME/emulator
 
-# export PATH=$PATH:$ANDROID_HOME/emulator
-#
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
-#
-# export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export PATH=$PATH:$ANDROID_HOME/tools
 
 export PATH=$PATH:$HOME/.config/tmux/plugins/tmuxifier/bin
 alias sudoedit='sudo -e'
