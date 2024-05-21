@@ -1,13 +1,12 @@
 #!/bin/bash
 
-chmod +x zsh-setup.sh
-
 # Setup for the terminal and coding environment.
 
 yay -Syy --noconfirm
 yay -S kitty neovim zsh git tmux tmux-plugin-manager --noconfirm
 
-source ./zsh-setup.sh
+mv ~/.zshrc ~/.zshrc.bak
+ln -s "$(pwd)/zshrc" ~/.zshrc
 
 # symlink kitty nvim tmux inside .config
 

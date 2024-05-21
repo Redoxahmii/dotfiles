@@ -16,27 +16,14 @@ return {
   --     },
   --   },
   -- },
-  --
   -- {
-  --   "jesseleite/nvim-macroni",
-  --   opts = {},
+  --   "pmizio/typescript-tools.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+  --   opts = {
+  --     jsx_close_tag = {
+  --       enable = true,
+  --       filetypes = { "javascriptreact", "typescriptreact" },
+  --     },
+  --   },
   -- },
-  {
-
-    "supermaven-inc/supermaven-nvim",
-    opts = {
-      keymaps = {
-        accept_suggestion = "<tab>",
-        clear_suggestion = "<A-c>",
-        accept_word = "<A-w>",
-      },
-    },
-  },
-  {
-    "L3MON4D3/LuaSnip",
-    keys = {
-      { "<tab>", false, mode = { "i", "s" } },
-      { "<s-tab>", false, mode = { "i", "s" } },
-    },
-  },
 }

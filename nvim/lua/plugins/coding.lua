@@ -18,23 +18,23 @@ return {
     config = true,
   },
   --- [INFO: Refactoring util]
-  {
-    "ThePrimeagen/refactoring.nvim",
-    keys = {
-      {
-        "<leader>r",
-        function(opts)
-          require("refactoring").select_refactor(opts)
-        end,
-        mode = "v",
-        noremap = true,
-        silent = true,
-        expr = false,
-        desc = "Refactor",
-      },
-    },
-    opts = {},
-  },
+  -- {
+  --   "ThePrimeagen/refactoring.nvim",
+  --   keys = {
+  --     {
+  --       "<leader>r",
+  --       function(opts)
+  --         require("refactoring").select_refactor(opts)
+  --       end,
+  --       mode = "v",
+  --       noremap = true,
+  --       silent = true,
+  --       expr = false,
+  --       desc = "Refactor",
+  --     },
+  --   },
+  --   opts = {},
+  -- },
   --- [INFO: mason ensure install]
   {
     "williamboman/mason.nvim",
@@ -202,6 +202,25 @@ return {
         end,
         desc = "file borwser at cwd",
       },
+    },
+  },
+  --- [INFO: Supermaven autocomplete]
+  {
+    "supermaven-inc/supermaven-nvim",
+    opts = {
+      keymaps = {
+        accept_suggestion = "<tab>",
+        clear_suggestion = "<A-c>",
+        accept_word = "<A-w>",
+      },
+    },
+  },
+  --- [INFO: LuaSnip disable for tab completion for supermaven]
+  {
+    "L3MON4D3/LuaSnip",
+    keys = {
+      { "<tab>", false, mode = { "i", "s" } },
+      { "<s-tab>", false, mode = { "i", "s" } },
     },
   },
 }

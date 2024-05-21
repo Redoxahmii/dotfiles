@@ -22,9 +22,9 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = 
 -- vim.api.nvim_set_keymap("n", "<C-t>", ":terminal<CR>", { noremap = true, silent = true })
 -- vim.api.nvim_set_keymap("c", "<leader>wt", "<esc>:lua require'utils'.sudo_write()<CR>", { silent = true })
 
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>cd",
-  "yiw$a<CR>console.log('<Esc>pa<Space>LOG:<Esc>la,<Esc>p",
-  { silent = true, desc = "console log" }
-)
+-- vim.api.nvim_set_keymap(
+--   "n",
+--   "<leader>cd",
+--   "yiw$a<CR>console.log('<Esc>pa<Space>LOG:<Esc>la,<Esc>p",
+--   { silent = true, desc = "console log" }
+-- )

@@ -18,6 +18,7 @@ alias gedit=gnome-text-editor
 alias dotfiles="cd ~/git-pkg/dotfiles/"
 alias clr=clear
 alias c=clear
+alias lg=lazygit
 alias fm=ranger
 alias kittyconf="nvim ~/.config/kitty/kitty.conf"
 alias hyprconf="nvim ~/.config/hypr/hyprland.conf"
