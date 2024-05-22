@@ -30,8 +30,8 @@ return {
       },
     })
   end,
-  keys = {
-    { "<tab>", false, mode = { "i", "s" } },
-    { "<s-tab>", false, mode = { "i", "s" } },
-  },
+  -- keys = {
+  --   { "<tab>", false, mode = { "i", "s" } },
+  --   { "<s-tab>", false, mode = { "i", "s" } },
+  -- },
 }
