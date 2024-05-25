@@ -32,5 +32,7 @@ alias please='sudo $(fc -ln -1)'
 alias r='$(fc -ln -1)'
 alias wscreenkey="GDK_BACKEND=x11 screenkey"
 alias e="exit"
+
+
 # INFO: These are the plugins to use in zsh
 # plugins=(git zsh-syntax-highlighting zsh-autosuggestions npm zsh-autocomplete tmux)
