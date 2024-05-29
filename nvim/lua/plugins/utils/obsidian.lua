@@ -27,7 +27,8 @@ return {
   },
   opts = {
     templates = {
-      subdir = "Templates",
+      debug = true,
+      folder = "Templates",
     },
     daily_notes = {
       folder = "Daily",
