@@ -33,23 +33,23 @@ return {
   keys = {
     { "<tab>", false, mode = { "i", "s" } },
     { "<s-tab>", false, mode = { "i", "s" } },
-    {
-      "<C-k>",
-      function()
-        return vim.snippet.active({ direction = 1 }) and "<cmd>lua vim.snippet.jump(1)<cr>" or "<Tab>"
-      end,
-      expr = true,
-      silent = true,
-      mode = { "i", "s" },
-    },
-    {
-      "<C-j>",
-      function()
-        return vim.snippet.active({ direction = -1 }) and "<cmd>lua vim.snippet.jump(-1)<cr>" or "<Tab>"
-      end,
-      expr = true,
-      silent = true,
-      mode = { "i", "s" },
-    },
+    -- {
+    --   "<C-k>",
+    --   function()
+    --     return vim.snippet.active({ direction = 1 }) and "<cmd>lua vim.snippet.jump(1)<cr>" or "<Tab>"
+    --   end,
+    --   expr = true,
+    --   silent = true,
+    --   mode = { "i", "s" },
+    -- },
+    -- {
+    --   "<C-j>",
+    --   function()
+    --     return vim.snippet.active({ direction = -1 }) and "<cmd>lua vim.snippet.jump(-1)<cr>" or "<Tab>"
+    --   end,
+    --   expr = true,
+    --   silent = true,
+    --   mode = { "i", "s" },
+    -- },
   },
 }
