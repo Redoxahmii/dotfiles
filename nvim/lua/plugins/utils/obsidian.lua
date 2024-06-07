@@ -1,7 +1,7 @@
 --- [INFO: Obsidian Notes]
 return {
   "epwalsh/obsidian.nvim",
-  version = "*", -- recommended, use latest release instead of latest commit
+  version = "*",
   lazy = true,
   cmd = "ObsidianQuickSwitch",
   ft = "markdown",
@@ -28,7 +28,7 @@ return {
   opts = {
     templates = {
       debug = true,
-      folder = "Templates",
+      folder = "~/Code/Obsidian/Templates",
     },
     daily_notes = {
       folder = "Daily",

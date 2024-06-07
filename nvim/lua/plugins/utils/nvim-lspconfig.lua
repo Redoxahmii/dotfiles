@@ -1,6 +1,7 @@
 --- [INFO: Allow Vue volar to attach properly]
 return {
-  "nvim-lspconfig",
+  "neovim/nvim-lspconfig",
+  version = "*",
   opts = {
     inlay_hints = { enabled = false },
     servers = {
@@ -19,35 +20,34 @@ return {
           },
         },
       },
-      -- tsserver = {
-      --   settings = {
-      --     typescript = {
-      --       inlayHints = {
-      --         -- taken from https://github.com/typescript-language-server/typescript-language-server#workspacedidchangeconfiguration
-      --         includeInlayEnumMemberValueHints = true,
-      --         includeInlayFunctionLikeReturnTypeHints = true,
-      --         includeInlayFunctionParameterTypeHints = true,
-      --         includeInlayParameterNameHints = "all",
-      --         includeInlayParameterNameHintsWhenArgumentMatchesName = true, -- false
-      --         includeInlayPropertyDeclarationTypeHints = true,
-      --         includeInlayVariableTypeHints = true,
-      --         includeInlayVariableTypeHintsWhenTypeMatchesName = true, -- false
-      --       },
-      --     },
-      --     javascript = {
-      --       inlayHints = {
-      --         includeInlayEnumMemberValueHints = true,
-      --         includeInlayFunctionLikeReturnTypeHints = true,
-      --         includeInlayFunctionParameterTypeHints = true,
-      --         includeInlayParameterNameHints = "all",
-      --         includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-      --         includeInlayPropertyDeclarationTypeHints = true,
-      --         includeInlayVariableTypeHints = true,
-      --         includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-      --       },
-      --     },
-      --   },
-      -- },
+      tsserver = {
+        settings = {
+          typescript = {
+            inlayHints = {
+              includeInlayEnumMemberValueHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayParameterNameHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = true, -- false
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayVariableTypeHints = true,
+              includeInlayVariableTypeHintsWhenTypeMatchesName = true, -- false
+            },
+          },
+          javascript = {
+            inlayHints = {
+              includeInlayEnumMemberValueHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayParameterNameHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayVariableTypeHints = true,
+              includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+            },
+          },
+        },
+      },
     },
   },
 }
