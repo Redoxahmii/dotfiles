@@ -28,6 +28,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
+zinit ice ver"#adfade31";
 zinit light marlonrichert/zsh-autocomplete
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
