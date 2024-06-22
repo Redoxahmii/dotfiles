@@ -28,8 +28,10 @@ return {
       center = {
         { action = "Telescope find_files",                                     desc = " Find file",       icon = " ", key = "f" },
         { action = "ene | startinsert",                                        desc = " New file",        icon = " ", key = "n" },
-        { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
-        { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
+        -- { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
+        { action = 'lua LazyVim.pick("oldfiles")()',                 desc = " Recent Files",    icon = " ", key = "r" },
+        -- { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
+        { action = 'lua LazyVim.pick.config_files()()',              desc = " Config",          icon = " ", key = "c" },
         { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = "", key = "s" },
         { action = 'ObsidianQuickSwitch',                                      desc = " Obsidian Notes",  icon = "󱞁 ", key = "w" },
         { action = "LazyExtras",                                               desc = " Lazy Extras",     icon = " ", key = "x" },

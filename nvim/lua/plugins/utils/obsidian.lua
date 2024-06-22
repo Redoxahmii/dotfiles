@@ -20,7 +20,6 @@ return {
     -- Required.
     "nvim-lua/plenary.nvim",
     "hrsh7th/nvim-cmp",
-    "nvim-telescope/telescope.nvim",
     "nvim-treesitter/nvim-treesitter",
     "3rd/image.nvim",
     -- see below for full list of optional dependencies 👇
@@ -46,6 +45,9 @@ return {
         name = "personal",
         path = "~/Code/Obsidian/",
       },
+    },
+    pickers = {
+      name = "fzf-lua",
     },
   },
 }

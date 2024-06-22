@@ -1,28 +1,19 @@
 return {
   -- {
   --   dir = "~/Code/Neovim/json-to-types.nvim/",
-  --   branch = "master",
   --   build = "sh install.sh npm",
   --   keys = {
   --     {
   --       "<leader>cu",
-  --       "<CMD>ConvertJSONtoTS<CR>",
+  --       "<CMD>ConvertJSONtoLang c++<CR>",
   --       desc = "Convert JSON to TS",
   --     },
   --     {
   --       "<leader>ct",
-  --       "<CMD>ConvertJSONtoTSBuffer<CR>",
+  --       function()
+  --         require("json-to-types").convertTypesBuffer("c++")
+  --       end,
   --       desc = "Convert JSON to TS Buffer",
-  --     },
-  --   },
-  -- },
-  -- {
-  --   "pmizio/typescript-tools.nvim",
-  --   dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-  --   opts = {
-  --     jsx_close_tag = {
-  --       enable = true,
-  --       filetypes = { "javascriptreact", "typescriptreact" },
   --     },
   --   },
   -- },
