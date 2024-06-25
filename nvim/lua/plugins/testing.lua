@@ -17,4 +17,16 @@ return {
   --     },
   --   },
   -- },
+  {
+    "fzf-lua",
+    opts = {
+      lsp = {
+        code_actions = LazyVim.opts("nvim-lspconfig").servers.vtsls and {
+          previewer = false,
+        } or {
+          previewer = vim.fn.executable("delta") == 1 and "codeaction_native" or nil,
+        },
+      },
+    },
+  },
 }
