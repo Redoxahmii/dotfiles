@@ -20,6 +20,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*.zsh",
   command = "set ft=bash",
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*.http",
+  command = "set ft=http",
+})
+
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "hyprland.conf",
   command = "set ft=hyprlang",
@@ -42,8 +48,13 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- INFO:  autcmd for restoring session auto
 -- vim.api.nvim_create_autocmd("VimEnter", {
---   pattern = "*",
---   command = "lua require('persistence').load()",
+--   group = vim.api.nvim_create_augroup("restore_session", { clear = true }),
+--   callback = function()
+--     if vim.fn.getcwd() ~= vim.env.HOME then
+--       require("persistence").load()
+--     end
+--   end,
+--   nested = true,
 -- })
 
 -- INFO: LSP Conflict VUEJS

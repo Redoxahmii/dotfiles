@@ -26,7 +26,7 @@ return {
         header = vim.split(logo, "\n"),
       -- stylua: ignore
       center = {
-        { action = "Telescope find_files",                                     desc = " Find file",       icon = " ", key = "f" },
+        { action = "lua LazyVim.pick()()",                                     desc = " Find file",       icon = " ", key = "f" },
         { action = "ene | startinsert",                                        desc = " New file",        icon = " ", key = "n" },
         -- { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
         { action = 'lua LazyVim.pick("oldfiles")()',                 desc = " Recent Files",    icon = " ", key = "r" },

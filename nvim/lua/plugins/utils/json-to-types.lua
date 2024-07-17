@@ -4,7 +4,7 @@ return {
     build = "sh install.sh npm",
     keys = {
       {
-        "<leader>cu",
+        "<leader>cU",
         "<CMD>ConvertJSONtoLang typescript<CR>",
         desc = "Convert JSON to TS",
       },
