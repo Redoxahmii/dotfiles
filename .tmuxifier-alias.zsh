@@ -6,7 +6,8 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:$ANDROID_HOME/tools
-
+export GOPATH=$HOME/go/
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.config/tmux/plugins/tmuxifier/bin
 alias sudoedit='sudo -e'
 

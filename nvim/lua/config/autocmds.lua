@@ -2,7 +2,7 @@
 -- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- Add any additional autocmds here
 
---INFO : Disable autoformat for lua files
+--INFO : Disable autoformat for .env files
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*.env",
   callback = function()
@@ -32,12 +32,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- INFO : mardown was previously added inside json pattern
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "markdown", ".md" },
-  callback = function()
-    vim.opt.conceallevel = 2
-  end,
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = { "markdown", ".md" },
+--   callback = function()
+--     vim.opt.conceallevel = 2
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "json", "jsonc" },
