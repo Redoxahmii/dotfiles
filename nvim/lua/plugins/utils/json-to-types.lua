@@ -5,7 +5,7 @@ return {
     keys = {
       {
         "<leader>cU",
-        "<CMD>ConvertJSONtoLang typescript<CR>",
+        "<CMD>ConvertJSONtoLang go<CR>",
         desc = "Convert JSON to TS",
       },
       {

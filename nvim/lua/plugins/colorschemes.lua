@@ -13,12 +13,24 @@ return {
   },
   {
     "catppuccin",
-    lazy = true,
     opts = {
-      flavor = "mocha",
+      flavour = "frappe",
       transparent_background = true,
     },
   },
+  -- {
+  --   "EdenEast/nightfox.nvim",
+  --   opts = {
+  --     options = {
+  --       transparent = true,
+  --       inverse = {
+  --         visual = true,
+  --         match_paren = true,
+  --         search = true,
+  --       },
+  --     },
+  --   },
+  -- }, -- lazy
   --- [INFO: Add rainbow markdown colors to solarized-osaka]
   {
     "craftzdog/solarized-osaka.nvim",
@@ -47,7 +59,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "solarized-osaka",
+      colorscheme = "catppuccin",
     },
   },
 }

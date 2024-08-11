@@ -1,7 +1,6 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.luasnip",
-    "lazyvim.plugins.extras.editor.fzf",
     "lazyvim.plugins.extras.editor.harpoon2",
     "lazyvim.plugins.extras.editor.refactoring",
     "lazyvim.plugins.extras.lang.go",
