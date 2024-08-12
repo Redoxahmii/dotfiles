@@ -28,9 +28,7 @@ return {
       center = {
         { action = "lua LazyVim.pick()()",                                     desc = " Find file",       icon = " ", key = "f" },
         { action = "ene | startinsert",                                        desc = " New file",        icon = " ", key = "n" },
-        -- { action = "Telescope oldfiles",                                       desc = " Recent files",    icon = " ", key = "r" },
         { action = 'lua LazyVim.pick("oldfiles")()',                 desc = " Recent Files",    icon = " ", key = "r" },
-        -- { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " Config",          icon = " ", key = "c" },
         { action = 'lua LazyVim.pick.config_files()()',              desc = " Config",          icon = " ", key = "c" },
         { action = 'lua require("persistence").load()',                        desc = " Restore Session", icon = "", key = "s" },
         { action = 'ObsidianQuickSwitch',                                      desc = " Obsidian Notes",  icon = "󱞁 ", key = "w" },
@@ -51,16 +49,19 @@ return {
       button.key_format = "  %s"
     end
 
-    -- close Lazy and re-open when the dashboard is ready
+    -- open dashboard after closing lazy
     if vim.o.filetype == "lazy" then
-      vim.cmd.close()
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "DashboardLoaded",
+      vim.api.nvim_create_autocmd("WinClosed", {
+        pattern = tostring(vim.api.nvim_get_current_win()),
+        once = true,
         callback = function()
-          require("lazy").show()
+          vim.schedule(function()
+            vim.api.nvim_exec_autocmds("UIEnter", { group = "dashboard" })
+          end)
         end,
       })
     end
+
     return opts
   end,
 }

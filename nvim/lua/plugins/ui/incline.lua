@@ -14,7 +14,7 @@ return {
           filename = "[+] " .. filename
         end
 
-        local icon, color = require("nvim-web-devicons").get_icon_color(filename)
+        local icon, color = MiniIcons.get("file", filename)
         return { { icon, guifg = color }, { " " }, { filename } }
       end,
     })

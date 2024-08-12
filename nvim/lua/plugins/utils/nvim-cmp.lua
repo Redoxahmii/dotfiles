@@ -4,10 +4,8 @@ return {
   event = { "InsertEnter", "CmdLineEnter" },
   dependencies = {
     "hrsh7th/cmp-cmdline",
-    "hrsh7th/cmp-emoji",
   },
-  opts = function(_, opts)
-    table.insert(opts.sources, { name = "emoji" })
+  opts = function(_)
     local cmp = require("cmp")
     -- `:` cmdline setup.
     cmp.setup.cmdline(":", {
