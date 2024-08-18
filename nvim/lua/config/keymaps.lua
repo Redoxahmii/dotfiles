@@ -24,7 +24,7 @@ vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = 
 
 -- vim.api.nvim_set_keymap(
 --   "n",
---   "<leader>cd",
+--   "<leader>cq",
 --   "yiw$a<CR>console.log('<Esc>pa<Space>LOG:<Esc>la,<Esc>p",
 --   { silent = true, desc = "console log" }
 -- )

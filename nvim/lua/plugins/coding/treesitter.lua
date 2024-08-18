@@ -22,5 +22,8 @@ return {
       "vim",
       "lua",
     },
+    highlight = {
+      additional_vim_regex_highlighting = true,
+    },
   },
 }

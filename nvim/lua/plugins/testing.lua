@@ -5,7 +5,7 @@ return {
   --   build = "sh install.sh npm",
   --   keys = {
   --     {
-  --       "<leader>cu",
+  --       "<leader>cU",
   --       "<CMD>ConvertJSONtoLang c++<CR>",
   --       desc = "Convert JSON to TS",
   --     },
@@ -16,4 +16,11 @@ return {
   --     },
   --   },
   -- },
+  {
+    "thePrimeagen/vim-be-good",
+    cmd = "VimBeGood",
+    config = function()
+      require("VimBeGood").setup({})
+    end,
+  },
 }

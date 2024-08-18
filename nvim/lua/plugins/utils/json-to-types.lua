@@ -2,6 +2,7 @@ return {
   {
     "Redoxahmii/json-to-types.nvim",
     build = "sh install.sh npm",
+    lazy = false,
     keys = {
       {
         "<leader>cU",
