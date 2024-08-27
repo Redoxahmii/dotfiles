@@ -10,22 +10,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
 })
 
-require("kulala.api").on("after_request", function(data)
-  local filename = "kulala.json"
-  local file = io.open(filename, "w")
-  if not file then
-    print("Error: Failed to open file for writing")
-    return
-  end
-  file:write(data.body)
-  file:close()
-  vim.cmd("edit " .. filename)
-  local buf = vim.api.nvim_get_current_buf()
-  vim.cmd("ConvertJSONtoLangBuffer typescript")
-  vim.api.nvim_buf_delete(buf, { force = true })
-  os.remove(filename)
-end)
-
 -- INFO : Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = "*",

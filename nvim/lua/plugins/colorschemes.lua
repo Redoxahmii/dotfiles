@@ -3,13 +3,21 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
-    },
+    config = function()
+      ---@diagnostic disable-next-line: missing-fields
+      require("tokyonight").setup({
+        transparent = true,
+        style = "night",
+        styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+        },
+        on_highlights = function(hl, c)
+          hl.LineNrAbove = { fg = c.dark5 }
+          hl.LineNrBelow = { fg = c.dark5 }
+        end,
+      })
+    end,
   },
   {
     "catppuccin",
@@ -36,6 +44,7 @@ return {
     "craftzdog/solarized-osaka.nvim",
     lazy = true,
     config = function()
+      ---@diagnostic disable-next-line: missing-fields
       require("solarized-osaka").setup({
         styles = {
           sidebars = "transparent",
@@ -59,7 +68,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-night",
+      colorscheme = "tokyonight",
     },
   },
 }

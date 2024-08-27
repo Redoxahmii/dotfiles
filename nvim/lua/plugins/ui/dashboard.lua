@@ -1,10 +1,11 @@
 --- [INFO: Dashboard]
 return {
-  "nvimdev/dashboard-nvim",
-  event = "VimEnter",
+  {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
 
-  opts = function()
-    local logo = [[
+    opts = function()
+      local logo = [[
 ██████╗ ███████╗██████╗  ██████╗ ██╗  ██╗
 ██╔══██╗██╔════╝██╔══██╗██╔═══██╗╚██╗██╔╝
 ██████╔╝█████╗  ██║  ██║██║   ██║ ╚███╔╝ 
@@ -13,17 +14,17 @@ return {
 ╚═╝  ╚═╝╚══════╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝
                                          
     ]]
-    logo = string.rep("\n", 3) .. logo .. "\n\n"
+      logo = string.rep("\n", 3) .. logo .. "\n\n"
 
-    local opts = {
-      theme = "doom",
-      hide = {
-        -- this is taken care of by lualine
-        -- enabling this messes up the actual laststatus setting after loading a file
-        statusline = false,
-      },
-      config = {
-        header = vim.split(logo, "\n"),
+      local opts = {
+        theme = "doom",
+        hide = {
+          -- this is taken care of by lualine
+          -- enabling this messes up the actual laststatus setting after loading a file
+          statusline = false,
+        },
+        config = {
+          header = vim.split(logo, "\n"),
       -- stylua: ignore
       center = {
         { action = "lua LazyVim.pick()()",                                     desc = " Find file",       icon = " ", key = "f" },
@@ -36,32 +37,33 @@ return {
         { action = "Lazy",                                                     desc = " Lazy",            icon = "󰒲 ", key = "l" },
         { action = "qa",                                                       desc = " Quit",            icon = " ", key = "q" },
       },
-        footer = function()
-          local stats = require("lazy").stats()
-          local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-          return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
-        end,
-      },
-    }
+          footer = function()
+            local stats = require("lazy").stats()
+            local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+            return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
+          end,
+        },
+      }
 
-    for _, button in ipairs(opts.config.center) do
-      button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
-      button.key_format = "  %s"
-    end
+      for _, button in ipairs(opts.config.center) do
+        button.desc = button.desc .. string.rep(" ", 43 - #button.desc)
+        button.key_format = "  %s"
+      end
 
-    -- open dashboard after closing lazy
-    if vim.o.filetype == "lazy" then
-      vim.api.nvim_create_autocmd("WinClosed", {
-        pattern = tostring(vim.api.nvim_get_current_win()),
-        once = true,
-        callback = function()
-          vim.schedule(function()
-            vim.api.nvim_exec_autocmds("UIEnter", { group = "dashboard" })
-          end)
-        end,
-      })
-    end
+      -- open dashboard after closing lazy
+      if vim.o.filetype == "lazy" then
+        vim.api.nvim_create_autocmd("WinClosed", {
+          pattern = tostring(vim.api.nvim_get_current_win()),
+          once = true,
+          callback = function()
+            vim.schedule(function()
+              vim.api.nvim_exec_autocmds("UIEnter", { group = "dashboard" })
+            end)
+          end,
+        })
+      end
 
-    return opts
-  end,
+      return opts
+    end,
+  },
 }

@@ -23,6 +23,7 @@ alias lg=lazygit
 alias fm=ranger
 alias kittyconf="nvim ~/.config/kitty/kitty.conf"
 alias hyprconf="nvim ~/.config/hypr/hyprland.conf"
+alias quteconf="nvim ~/.config/qutebrowser/config.py"
 alias tmx="tmuxifier"
 alias tmxls="tmuxifier list-sessions"
 alias tmxn="tmuxifier new-session"

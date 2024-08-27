@@ -77,3 +77,5 @@ cmp_cmdline
 jumplist
 fzf
 keymaps
+printAgent
+PrintAgents

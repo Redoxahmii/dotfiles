@@ -4,7 +4,7 @@ function M.cowboy()
   ---@type table?
   local id
   local ok = true
-  for _, key in ipairs({ "h", "l", "+", "-" }) do
+  for _, key in ipairs({ "h", "l", "j", "k", "+", "-" }) do
     local count = 0
     ---@diagnostic disable-next-line: undefined-field
     local timer = assert(vim.loop.new_timer())
