@@ -6,7 +6,6 @@
     "lazyvim.plugins.extras.editor.refactoring",
     "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.lang.markdown",
-    "lazyvim.plugins.extras.lang.yaml",
     "lazyvim.plugins.extras.ui.treesitter-context",
     "lazyvim.plugins.extras.util.rest"
   ],

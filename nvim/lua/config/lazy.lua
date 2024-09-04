@@ -16,10 +16,9 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
-    { import = "lazyvim.plugins.extras.coding.yanky" },
+    -- { import = "lazyvim.plugins.extras.coding.yanky" },
     { import = "lazyvim.plugins.extras.vscode" },
-    { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
-    { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
+    -- { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.coding.neogen" },
@@ -48,6 +47,10 @@ require("lazy").setup({
     enabled = true,
     -- frequency = 604800, -- check once in 3 day
   }, -- automatically check for plugin updates
+  ---@diagnostic disable-next-line: assign-type-mismatch
+  dev = {
+    path = "~/Code/Neovim/",
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins

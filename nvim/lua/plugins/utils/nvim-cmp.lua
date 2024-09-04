@@ -2,6 +2,7 @@
 return {
   "hrsh7th/nvim-cmp",
   event = { "InsertEnter", "CmdLineEnter" },
+  dev = true,
   dependencies = {
     "hrsh7th/cmp-cmdline",
   },
@@ -22,6 +23,10 @@ return {
       }),
     })
     cmp.setup({
+      performance = {
+        debounce = 0,
+        throttle = 0,
+      },
       sources = {
         name = "nvim_lsp",
         max_item_count = 10,

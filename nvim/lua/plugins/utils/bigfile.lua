@@ -1,8 +1,8 @@
 return {
-  {
-    "LunarVim/bigfile.nvim",
-    event = "BufRead",
-    lazy = true,
-    opts = {},
-  },
+  -- {
+  --   "LunarVim/bigfile.nvim",
+  --   event = "BufRead",
+  --   lazy = true,
+  --   opts = {},
+  -- },
 }

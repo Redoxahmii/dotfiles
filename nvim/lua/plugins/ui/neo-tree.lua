@@ -13,19 +13,25 @@ return {
       },
     },
     window = {
-      width = 26,
+      width = 28,
+    },
+    default_component_configs = {
+      indent = {
+        indent_size = 2,
+        padding = 0,
+      },
     },
   },
   keys = {
-    {
-      "<Leader>B",
-      function()
-        local function buffer_dir()
-          return vim.fn.expand("%:p:h")
-        end
-        require("neo-tree.command").execute({ toggle = true, dir = buffer_dir() })
-      end,
-      desc = "Toggle neo-tree for current buffer",
-    },
+    -- {
+    --   "<Leader>B",
+    --   function()
+    --     local function buffer_dir()
+    --       return vim.fn.expand("%:p:h")
+    --     end
+    --     require("neo-tree.command").execute({ toggle = true, dir = buffer_dir() })
+    --   end,
+    --   desc = "Toggle neo-tree for current buffer",
+    -- },
   },
 }

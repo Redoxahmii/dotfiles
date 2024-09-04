@@ -4,7 +4,7 @@
 -- vim.keymap.set("n", "<C-d>", "<C-d>zz", { remap = true })
 -- vim.keymap.set("n", "<C-u>", "<C-u>zz", { remap = true })
 local discipline = require("redox.discipline")
-discipline.cowboy()
+-- discipline.cowboy()
 
 vim.keymap.set("n", "<CR>", "o<Esc>", { noremap = true, silent = true })
 vim.keymap.set("n", "<S-Enter>", "O<Esc>", { noremap = true, silent = true })
