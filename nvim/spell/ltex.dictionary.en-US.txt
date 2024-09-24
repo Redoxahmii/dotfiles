@@ -1,3 +1,12 @@
+PrintAgents
+printAgent
+klaviyo
+Synthseer
+Klaviyo
+MERN
+gifs
+Hazrat
+Musa
 gitsigns
 nvim
 Neovim
@@ -89,7 +98,3 @@ OTP
 Hazrat
 Musa
 obscura
-LazyVim
-Todo
-eslint
-SwayWM

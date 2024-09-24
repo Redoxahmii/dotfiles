@@ -10,7 +10,7 @@ return {
         style = "night",
         styles = {
           sidebars = "transparent",
-          floats = "transparent",
+          -- floats = "transparent",
         },
         on_highlights = function(hl, c)
           hl.LineNrAbove = { fg = c.dark5 }
@@ -48,6 +48,10 @@ return {
             hl["keyword.javascript"] = { fg = util.darken(c.green500, 0.85) }
             hl["keyword.return.javascript"] = { fg = util.darken(c.green500, 0.85) }
           end
+          hl.CursorLineNr = { fg = c.orange700 }
+
+          hl.LineNrAbove = { fg = c.orange500 }
+          hl.LineNrBelow = { fg = c.orange500 }
         end,
       })
     end,

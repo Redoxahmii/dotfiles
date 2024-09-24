@@ -3,8 +3,7 @@ return {
     "Redoxahmii/json-to-types.nvim",
     build = "sh install.sh npm",
     ft = "json",
-    -- INFO: Turn this on to use local version
-    -- dev = true,
+    dev = false,
     keys = {
       {
         "<leader>cU",

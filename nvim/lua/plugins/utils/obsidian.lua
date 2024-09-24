@@ -1,7 +1,7 @@
 --- [INFO: Obsidian Notes]
 return {
   "epwalsh/obsidian.nvim",
-  version = "*",
+  -- version = "*",
   lazy = true,
   cmd = "ObsidianQuickSwitch",
   ft = "markdown",
