@@ -19,6 +19,11 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*.mdx",
+  command = "set ft=markdown",
+})
+
+vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*.http",
   command = "set ft=http",
 })
