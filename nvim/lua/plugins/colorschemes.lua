@@ -26,6 +26,7 @@ return {
       transparent_background = true,
     },
   },
+
   --- [INFO: Add rainbow markdown colors to solarized-osaka]
   {
     "craftzdog/solarized-osaka.nvim",
@@ -56,7 +57,6 @@ return {
       })
     end,
   },
-  { "rose-pine/neovim", name = "rose-pine" },
   {
     "LazyVim/LazyVim",
     opts = {

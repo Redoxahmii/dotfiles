@@ -1,4 +1,4 @@
-vim.opt.jumpoptions = "stack"
+-- vim.opt.jumpoptions = "stack"
 vim.opt.scrolloff = 10
 vim.g.leader = " "
 vim.opt.diffopt = "vertical"
