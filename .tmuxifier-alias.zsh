@@ -20,7 +20,6 @@ alias dotfiles="cd ~/git-pkg/dotfiles/"
 alias clr=clear
 alias c=clear
 alias lg=lazygit
-alias fm=ranger
 alias kittyconf="nvim ~/.config/kitty/kitty.conf"
 alias hyprconf="nvim ~/.config/hypr/hyprland.conf"
 alias quteconf="nvim ~/.config/qutebrowser/config.py"
@@ -35,6 +34,15 @@ alias r='$(fc -ln -1)'
 alias wscreenkey="GDK_BACKEND=x11 screenkey"
 alias e="exit"
 
+# yazi-config
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # INFO: These are the plugins to use in zsh
 # plugins=(git zsh-syntax-highlighting zsh-autosuggestions npm zsh-autocomplete tmux)

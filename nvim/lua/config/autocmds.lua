@@ -33,12 +33,12 @@ vim.api.nvim_create_autocmd("BufEnter", {
   command = "set ft=hyprlang",
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "json", "jsonc" },
-  callback = function()
-    vim.opt.conceallevel = 0
-  end,
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = { "json", "jsonc" },
+--   callback = function()
+--     vim.opt.conceallevel = 0
+--   end,
+-- })
 
 -- INFO:  autcmd for restoring session auto
 -- vim.api.nvim_create_autocmd("VimEnter", {

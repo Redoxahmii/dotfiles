@@ -5,15 +5,6 @@ return {
     event = "LazyFile",
     opts = {
       inlay_hints = { enabled = false },
-      -- servers = {
-      --   vtsls = {
-      --     settings = {
-      --       implicitProjectConfiguration = {
-      --         checkJs = true,
-      --       },
-      --     },
-      --   },
-      -- },
       servers = {
         lua_ls = {
           settings = {

@@ -11,12 +11,12 @@ return {
         style = "night",
         styles = {
           sidebars = "transparent",
-          -- floats = "transparent",
+          floats = "transparent",
         },
-        on_highlights = function(hl, c)
-          hl.LineNrAbove = { fg = c.dark5 }
-          hl.LineNrBelow = { fg = c.dark5 }
-        end,
+        -- on_highlights = function(hl, c)
+        --   hl.LineNrAbove = { fg = c.dark5 }
+        --   hl.LineNrBelow = { fg = c.dark5 }
+        -- end,
       })
     end,
   },
@@ -32,38 +32,37 @@ return {
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = true,
-    dev = true,
-    opts = {
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
-    },
-    -- config = function()
-    --   ---@diagnostic disable-next-line: missing-fields
-    --   require("solarized-osaka").setup({
-    --     styles = {
-    --       sidebars = "transparent",
-    --       floats = "transparent",
-    --     },
-    --     on_highlights = function(hl, c)
-    --       local util = require("solarized-osaka.util")
-    --       local markdown_rainbow = { c.blue, c.yellow, c.green, c.red, c.magenta, c.cyan }
-    --       for i, color in ipairs(markdown_rainbow) do
-    --         hl["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true }
-    --         hl["Headline" .. i] = { bg = util.darken(color, 0.05) }
-    --         hl["keyword.tsx"] = { fg = util.darken(c.green500, 0.85) }
-    --         hl["keyword.return.tsx"] = { fg = util.darken(c.green500, 0.85) }
-    --         hl["keyword.javascript"] = { fg = util.darken(c.green500, 0.85) }
-    --         hl["keyword.return.javascript"] = { fg = util.darken(c.green500, 0.85) }
-    --       end
-    --       hl.CursorLineNr = { fg = c.orange700 }
-    --       hl.LineNrAbove = { fg = c.orange500 }
-    --       hl.LineNrBelow = { fg = c.orange500 }
-    --       hl.NeoTreeMessage = { fg = util.lighten(c.base02, 0.8) }
-    --     end,
-    --   })
-    -- end,
+    dev = false,
+    -- opts = {
+    --   styles = {
+    --     sidebars = "transparent",
+    --     floats = "transparent",
+    --   },
+    -- },
+    config = function()
+      ---@diagnostic disable-next-line: missing-fields
+      require("solarized-osaka").setup({
+        styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+        },
+        on_highlights = function(hl, c)
+          local util = require("solarized-osaka.util")
+          local markdown_rainbow = { c.blue, c.yellow, c.green, c.red, c.magenta, c.cyan }
+          for i, color in ipairs(markdown_rainbow) do
+            hl["@markup.heading." .. i .. ".markdown"] = { fg = color, bold = true }
+            hl["Headline" .. i] = { bg = util.darken(color, 0.05) }
+            hl["keyword.tsx"] = { fg = util.darken(c.green500, 0.85) }
+            hl["keyword.return.tsx"] = { fg = util.darken(c.green500, 0.85) }
+            hl["keyword.javascript"] = { fg = util.darken(c.green500, 0.85) }
+            hl["keyword.return.javascript"] = { fg = util.darken(c.green500, 0.85) }
+          end
+          hl.CursorLineNr = { fg = c.cyan500 }
+          hl.LineNrAbove = { fg = c.orange700 }
+          hl.LineNrBelow = { fg = c.orange700 }
+        end,
+      })
+    end,
   },
   {
     "LazyVim/LazyVim",
