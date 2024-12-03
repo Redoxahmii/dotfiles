@@ -4,7 +4,7 @@ return {
     "neovim/nvim-lspconfig",
     event = "LazyFile",
     opts = {
-      inlay_hints = { enabled = false },
+      inlay_hints = { enabled = true },
       servers = {
         lua_ls = {
           settings = {

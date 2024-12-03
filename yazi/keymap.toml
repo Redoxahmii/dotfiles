@@ -67,3 +67,10 @@ desc = "Delete all bookmarks"
 on = ["C"]
 run = "plugin ouch --args=zip"
 desc = "Compress with ouch"
+
+[[manager.prepend_keymap]]
+on = "T"
+run = "plugin --sync max-preview"
+# For upcoming Yazi 0.4 (nightly version):
+# run  = "plugin max-preview"
+desc = "Maximize or restore preview"

@@ -5,3 +5,5 @@ require("bookmarks"):setup({
 	last_directory = { enable = true, persist = true },
 	file_pick_mode = "hover",
 })
+
+require("no-status"):setup()

@@ -70,9 +70,9 @@ setopt hist_find_no_dups
  zstyle ':completion:*' menu no
  zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
  zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:*' switch-group '<' '>'
 
 # Aliases
-alias ls='ls --color'
 export NVM_DIR=~/.nvm
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 # Shell integrations

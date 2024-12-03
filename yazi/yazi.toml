@@ -1,5 +1,6 @@
 [manager]
 linemode = "size"
+ratio = [1, 4, 3]
 [opener]
 play = [{ run = 'vlc "$@"' }]
 
