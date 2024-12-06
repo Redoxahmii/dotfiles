@@ -3,7 +3,7 @@
 # Setup for the terminal and coding environment.
 
 yay -Syy --noconfirm
-yay -S kitty neovim zsh git tmux tmux-plugin-manager --noconfirm
+yay -S kitty neovim zsh git tmux tmux-plugin-manager bat eza yazi --noconfirm
 
 mv ~/.zshrc ~/.zshrc.bak
 ln -s "$(pwd)/zshrc" ~/.zshrc

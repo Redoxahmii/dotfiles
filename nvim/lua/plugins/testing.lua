@@ -13,13 +13,11 @@ return {
   },
   {
     "kawre/leetcode.nvim",
-    dev = false,
     branch = "dev",
     build = ":TSUpdate html",
     dependencies = {
-      "nvim-lua/plenary.nvim", -- required by telescope
+      "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
-
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
