@@ -11,7 +11,7 @@ vim.keymap.set("n", "c", '"cc', opts)
 vim.keymap.set("v", "c", '"cc', opts)
 vim.keymap.set("n", "x", '"_x', opts)
 vim.keymap.set("v", "p", '"_dP', opts)
-
+vim.keymap.set("n", "yc", "yy<cmd>normal gcc<CR>p", { desc = "Yank and copy" })
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
 -- center
 vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)

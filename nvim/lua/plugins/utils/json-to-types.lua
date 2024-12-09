@@ -39,7 +39,7 @@ return {
 
               vim.cmd("edit " .. filename)
               local buf = vim.api.nvim_get_current_buf()
-              vim.cmd("ConvertJSONtoLangBuffer python")
+              vim.cmd("ConvertJSONtoLangBuffer typescript")
               vim.api.nvim_buf_delete(buf, { force = true })
               os.remove(filename)
             end)
