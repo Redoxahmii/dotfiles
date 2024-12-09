@@ -35,7 +35,7 @@
         "spacing": 10
     },
     "clock": {
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%I:%M %p}"
     },
     "cpu": {
         "format": "{usage}% "
@@ -53,14 +53,15 @@
         "format": "{capacity}% {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "on-click":"$HOME/.config/rofi/applets/bin/battery.sh"
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "Disconnected ⚠",
-    "on-click" : "nm-connection-editor"
+        "on-click" : "nm-connection-editor"
     },
     "pulseaudio": {
         //"scroll-step": 1,
