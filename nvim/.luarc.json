@@ -1,5 +1,6 @@
 {
     "diagnostics.disable": [
-        "deprecated"
+        "deprecated",
+        "doc-field-no-class"
     ]
 }

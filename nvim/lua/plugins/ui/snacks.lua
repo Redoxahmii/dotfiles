@@ -1,11 +1,26 @@
 return {
+  ---@type snacks.config
   {
     -- TODO: format proper
     "snacks.nvim",
     opts = {
-      scratch = {
-        ft = "markdown",
-      },
+      -- scratch = {
+      --   ---@type table<string, snacks.win.Config>
+      --   win_by_ft = {
+      --     javascript = {
+      --       keys = {
+      --         ["source"] = {
+      --           "<cr>",
+      --           function(self)
+      --             local name = "scratch." .. vim.fn.fnamemodify(vim.api.nvim_buf_get_name(self.buf), ":e")
+      --             local output = vim.cmd("node" .. name)
+      --       Snacks.debug.run({ buf = self.buf, name = name })
+      --           end,
+      --         },
+      --       },
+      --     },
+      --   },
+      -- },
       dashboard = {
         preset = {
           keys = {

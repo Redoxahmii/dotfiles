@@ -22,7 +22,6 @@ return {
     "hrsh7th/nvim-cmp",
     "nvim-treesitter/nvim-treesitter",
     "3rd/image.nvim",
-    -- see below for full list of optional dependencies 👇
   },
   opts = {
     ui = {

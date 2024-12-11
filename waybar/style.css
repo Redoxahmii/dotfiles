@@ -2,7 +2,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "JetBrainsMono Nerd Font";
+  font-family: "Noto Sans", sans-serif;
   font-size: 13px;
   font-weight: bold;
   min-height: 0;
@@ -38,13 +38,13 @@ window#waybar {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
-.modules-center {
-  background: #002b36;
-  border-radius: 20px;
-  padding: 0 10px;
-  margin: 0 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-}
+/* .modules-center { */
+/*   background: #002b36; */
+/*   border-radius: 20px; */
+/*   padding: 0 10px; */
+/*   margin: 0 5px; */
+/*   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
+/* } */
 
 .modules-right {
   background: #002b36;
@@ -83,9 +83,9 @@ window#waybar {
 }
 
 /* Mode module */
-#mode {
-  background: #002b36; /* Solarized pill color */
-  color: #eee8d5; /* Solarized base0 */
+#submap {
+  background: #002b36;
+  color: #eee8d5;
   padding: 0 12px;
   font-weight: bold;
 }
@@ -106,9 +106,14 @@ window#waybar {
   animation: blink 0.5s linear infinite alternate;
 }
 
+#battery.charging {
+  color: #2dbaaf;
+  animation: blink 0.5s linear infinite alternate;
+}
+
 @keyframes blink {
   to {
-    color: #fdf6e3; /* Solarized base3 (brightest) */
+    color: #93a1a1; /* Solarized base3 (brightest) */
   }
 }
 
