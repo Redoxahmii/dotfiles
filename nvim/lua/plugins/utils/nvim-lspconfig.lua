@@ -13,13 +13,13 @@ return {
             },
           },
         },
-        vtsls = {
-          settings = {
-            implicitProjectConfiguration = {
-              checkJs = true,
-            },
-          },
-        },
+        -- vtsls = {
+        --   settings = {
+        --     implicitProjectConfiguration = {
+        --       checkJs = true,
+        --     },
+        --   },
+        -- },
       },
     },
   },
