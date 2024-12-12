@@ -1,17 +1,21 @@
 {
   "layer": "top", // Waybar at top layer
+  "ipc": true,
   "position": "top", // Waybar at the bottom of your screen
   "height": 30, // Waybar height
   // "width": 1366, // Waybar width
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces", "hyprland/submap", "custom/spotify"],
   "modules-center": ["hyprland/window"],
-  // "on-click-right": "pkill -SIGUSR1 waybar",
-  // "on-click-left": "pkill -SIGUSR2 waybar",
-  // "layer-shell": {
-  //   "exclusive-zone": true,
-  //   "visibility": "toggleable"
-  // },
+  "on-click-right": "pkill -SIGUSR1 waybar",
+  "on-click-left": "pkill -SIGUSR2 waybar",
+  "layer-shell": {
+    "exclusive-zone": true,
+    "visibility": "toggleable"
+  },
+  "persistent_workspaces": {
+    "*": 4
+  },
   "modules-right": [
     "pulseaudio",
     "network",
@@ -40,8 +44,15 @@
   "hyprland/submap": {
     "format": "<span style=\"italic\">{}</span>"
   },
+  // The 1975 - I Always Wanna Die (Sometimes) - YouTube — Mozilla Firefox
   "hyprland/window": {
+    "separate-outputs": true,
     "truncate-text": true,
+    // "rewrite": {
+    //   "(.*) — Mozilla Firefox": " &#x202c;$1",
+    //   // "tmux": "> [$1]",
+    //   "ta": "🌎"
+    // },
     // window#waybar.solo
     "truncate-text-limit": 30
   },

@@ -77,9 +77,8 @@ window#waybar {
   transition: all 0.3s ease-in-out;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
   color: #d33682; /* Solarized magenta for focused workspace */
-  border: 2px solid #d33682;
 }
 
 /* Mode module */
@@ -98,11 +97,11 @@ window#waybar {
 
 /* Battery module */
 #battery {
-  color: #2aa198; /* Solarized cyan */
+  color: #2aa198;
 }
 
 #battery.warning {
-  color: #dc322f; /* Solarized red for warning */
+  color: #dc322f;
   animation: blink 0.5s linear infinite alternate;
 }
 
