@@ -7,6 +7,7 @@ return {
   },
   {
     "kawre/leetcode.nvim",
+    lazy = true,
     branch = "dev",
     build = ":TSUpdate html",
     dependencies = {
@@ -19,5 +20,12 @@ return {
       lang = "javascript",
       logging = false,
     },
+  },
+  {
+    -- Neovim plugin to automatic change normal string to template string
+    -- in JS like languages
+    -- https://github.com/axelvc/template-string.nvim
+    "axelvc/template-string.nvim",
+    config = true,
   },
 }

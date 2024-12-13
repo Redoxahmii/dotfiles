@@ -50,3 +50,17 @@ vim.api.nvim_create_autocmd("BufEnter", {
 --   end,
 --   nested = true,
 -- })
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = vim.api.nvim_create_augroup("ts_fix_imports", { clear = true }),
+  desc = "Add missing imports and remove unused imports for TS",
+  pattern = { "*.ts", "*.tsx" },
+  callback = function()
+    local params = vim.lsp.util.make_range_params()
+    params.context = {
+      only = { "source.addMissingImports.ts", "source.removeUnused.ts" },
+    }
+    LazyVim.lsp.action["source.organizeImports"](params)
+    LazyVim.lsp.action["source.addMissingImports"](params)
+  end,
+})

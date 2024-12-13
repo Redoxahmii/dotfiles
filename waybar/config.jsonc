@@ -62,7 +62,7 @@
   },
   "clock": {
     "format": "{:%I:%M %p}",
-    "format-alt": "{:%d %b %Y}"
+    "format-alt": "{:%A %d %b %Y }"
   },
   "cpu": {
     "format": "{usage}%  ",
@@ -82,7 +82,7 @@
     "format-charging": " {capacity}%  <span></span>",
     "format-icons": ["", "", "", "", ""],
     "interval": 15,
-    "on-click": "$HOME/.config/rofi/applets/bin/battery.sh"
+    "on-click": "./waybar-battery.sh"
   },
   "network": {
     // "interface": "wlp2s0", // (Optional) To force the use of this interface

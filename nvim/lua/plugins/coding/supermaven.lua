@@ -2,7 +2,7 @@
 return {
   {
     "supermaven-inc/supermaven-nvim",
-    event = "InsertEnter",
+    event = "BufReadPre",
     opts = {
       keymaps = {
         accept_suggestion = "<tab>",
