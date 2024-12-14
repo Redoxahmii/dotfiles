@@ -82,7 +82,7 @@
     "format-charging": " {capacity}%  <span></span>",
     "format-icons": ["", "", "", "", ""],
     "interval": 15,
-    "on-click": "./waybar-battery.sh"
+    "on-click": "./scripts/waybar-battery.sh"
   },
   "network": {
     // "interface": "wlp2s0", // (Optional) To force the use of this interface
@@ -112,7 +112,8 @@
     "format": "♬  {}",
     "max-length": 40,
     "interval": 30, // Remove this if your script is endless and write in loop
-    "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
-    "exec-if": "pgrep -f 'chrome|firefox'"
+    "exec": "$HOME/.config/waybar/scripts/player_status.sh 2> /dev/null", // Script in resources folder
+    "exec-if": "pgrep -f 'chrome|firefox'",
+    "on-click": "playerctl play-pause"
   }
 }
