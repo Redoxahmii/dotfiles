@@ -1,32 +1,23 @@
 return {
-  ---@type snacks.config
   {
     -- TODO: format proper
     "snacks.nvim",
     opts = {
-      -- scratch = {
-      --   ---@type table<string, snacks.win.Config>
-      --   win_by_ft = {
-      --     javascript = {
-      --       keys = {
-      --         ["source"] = {
-      --           "<cr>",
-      --           function(self)
-      --             local name = "scratch." .. vim.fn.fnamemodify(vim.api.nvim_buf_get_name(self.buf), ":e")
-      --             local output = vim.cmd("node" .. name)
-      --       Snacks.debug.run({ buf = self.buf, name = name })
-      --           end,
-      --         },
-      --       },
-      --     },
-      --   },
-      -- },
+      indent = {
+        scope = {
+          treesitter = {
+            enabled = false,
+          },
+        },
+      },
+      scroll = {
+        enabled = false,
+      },
       dashboard = {
         preset = {
           keys = {
             { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
             { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-            -- { icon = "󱞁 ", key = "d", desc = "Daily todo", action = ":e ~/Code/Obsidian/daily.md" },
             { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
             {
               icon = " ",
@@ -70,52 +61,4 @@ return {
       },
     },
   },
-  --
-  -- {
-  --   "snacks.nvim",
-  --
-  --   lazy = false,
-  --   opts = {
-  --     dashboard = {
-  --       preset = {
-  --         header = [[
-  --
-  --   ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▒    ▒▓▓▓▓▒        ▒▓▓▓▓▒
-  --   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒    ▒▓▓▓▓▓       ▒▓▓▓▓▒
-  --  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒      ▓▓▓▓▓▓▒▒▒▒▒▓▓▓▓▓▒
-  --                        ▓▓▓▓▓▓▓▓▓▓▓▓▓▒
-  --                          ▒▒▒▒▒▒▒▒
-  --   ▒▒▒▒▒▒
-  --  ▓▓▓▓▓▓▓
-  --  ▓▓▓▓▓▓▓▒               ▒▒▒▒▒▒▒
-  --  ▒▓▓▓▓▓▓▓▒            ▒▓▓▓▓▓▓▓▒
-  --   ▒▓▓▓▓▓▓▓▓▓▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▒
-  --    ▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒
-  --      ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒
-  --                          ]],
-  --       },
-  --       formats = {
-  --         header = {
-  --           align = "center",
-  --         },
-  --       },
-  --       sections = {
-  --         {
-  --           section = "header",
-  --           padding = 4,
-  --         },
-  --         {
-  --           pane = 2,
-  --           {
-  --             { section = "keys", gap = 1, padding = 2 },
-  --             { section = "startup" },
-  --           },
-  --         },
-  --       },
-  --     },
-  --   },
-  --   init = function()
-  --     vim.api.nvim_set_hl(0, "SnacksDashboardHeader", { fg = "#ffffff" })
-  --   end,
-  -- },
 }

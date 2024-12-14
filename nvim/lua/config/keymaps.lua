@@ -1,25 +1,39 @@
--- local discipline = require("redox.discipline")
--- discipline.cowboy()
 local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<CR>", "o<Esc>", opts)
-vim.keymap.set("n", "<S-Enter>", "O<Esc>", opts)
+local map = vim.keymap.set
+
+-- Replace hex with HSL
+map("n", "<leader>rh", function()
+  require("redox.hsl").replaceHexWithHSL()
+end)
+
+-- Enter to add spaces
+map("n", "<CR>", "o<Esc>", opts)
+map("n", "<S-Enter>", "O<Esc>", opts)
 
 -- Keep my yank register clean
-vim.keymap.set("n", "d", '"dd', opts)
-vim.keymap.set("v", "d", '"dd', opts)
-vim.keymap.set("n", "c", '"cc', opts)
-vim.keymap.set("v", "c", '"cc', opts)
-vim.keymap.set("n", "x", '"_x', opts)
-vim.keymap.set("v", "p", '"_dP', opts)
-vim.keymap.set("n", "yc", "yy<cmd>normal gcc<CR>p", { desc = "Yank and copy" })
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", opts)
--- center
-vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
-vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
--- find and center
-vim.keymap.set("n", "n", "nzzzv", opts)
-vim.keymap.set("n", "N", "Nzzzv", opts)
--- :lua require('fzf-lua').files({ cwd = '~/.config' })
-vim.keymap.set("n", "<leader>sp", function()
-  require("fzf-lua").files({ cwd = vim.fs.joinpath(vim.fn.stdpath("data"), "lazy") })
+map("n", "d", '"dd', opts)
+map("v", "d", '"dd', opts)
+map("n", "c", '"cc', opts)
+map("v", "c", '"cc', opts)
+map("n", "x", '"_x', opts)
+map("v", "p", '"_dP', opts)
+map("n", "yc", "yy<cmd>normal gcc<CR>p", { desc = "Yank and copy" })
+
+-- Go to next/prev diagnostic
+map("n", "<C-j>", function()
+  vim.diagnostic.goto_next()
 end, opts)
+map("n", "<C-k>", function()
+  vim.diagnostic.goto_prev()
+end, opts)
+
+-- Delete backwards
+map("n", "dw", 'vb"_d')
+
+-- center
+map("n", "<C-d>", "<C-d>zz", opts)
+map("n", "<C-u>", "<C-u>zz", opts)
+
+-- find and center
+map("n", "n", "nzzzv", opts)
+map("n", "N", "Nzzzv", opts)

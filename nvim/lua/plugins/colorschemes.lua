@@ -3,7 +3,7 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    dev = true,
+    dev = false,
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require("tokyonight").setup({
@@ -44,7 +44,7 @@ return {
       require("solarized-osaka").setup({
         styles = {
           sidebars = "transparent",
-          floats = "transparent",
+          -- floats = "transparent",
         },
         on_highlights = function(hl, c)
           local util = require("solarized-osaka.util")
@@ -60,6 +60,8 @@ return {
           hl.CursorLineNr = { fg = c.cyan500 }
           hl.LineNrAbove = { fg = c.orange700 }
           hl.LineNrBelow = { fg = c.orange700 }
+          hl.SnacksIndentScope = { fg = c.violet700, nocombine = true }
+          hl.SnacksIndent = { fg = c.base03, nocombine = true }
         end,
       })
     end,
