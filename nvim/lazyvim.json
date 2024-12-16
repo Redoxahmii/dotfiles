@@ -7,7 +7,6 @@
     "lazyvim.plugins.extras.editor.refactoring",
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lang.toml",
-    "lazyvim.plugins.extras.ui.mini-indentscope",
     "lazyvim.plugins.extras.ui.treesitter-context",
     "lazyvim.plugins.extras.util.dot",
     "lazyvim.plugins.extras.util.mini-hipatterns",

@@ -151,4 +151,23 @@ function M.replaceHexWithHSL()
   vim.api.nvim_buf_set_lines(0, line_number - 1, line_number, false, { line_content })
 end
 
+function M.replaceHSLtoHex()
+  -- Get the current line number
+  local line_number = vim.api.nvim_win_get_cursor(0)[1]
+
+  -- Get the line content
+  local line_content = vim.api.nvim_buf_get_lines(0, line_number - 1, line_number, false)[1]
+  local modified_line = line_content:gsub("hsl%(%s*(%d+)%s*,%s*(%d+)%%?%s*,%s*(%d+)%%?%s*%)", function(h, s, l)
+    h, s, l = tonumber(h), tonumber(s), tonumber(l)
+    local hex_color = M.hslToHex(h, s, l)
+    return hex_color
+  end)
+
+  if modified_line ~= line_content then
+    vim.api.nvim_buf_set_lines(0, line_number - 1, line_number, false, { modified_line })
+  else
+    print("No HSL color found to convert")
+  end
+end
+
 return M

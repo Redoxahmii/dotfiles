@@ -45,7 +45,7 @@ require("lazy").setup({
   -- install = { colorscheme = { "tokyonight", "habamax" } },
   checker = {
     enabled = true,
-    frequency = 604800, -- check once in 3 day
+    -- frequency = 604800, -- check once in 3 day
   }, -- automatically check for plugin updates
   ---@diagnostic disable-next-line: assign-type-mismatch
   dev = {

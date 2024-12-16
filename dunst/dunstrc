@@ -38,7 +38,9 @@ hide_duplicate_count = false
 icon_position = left
 min_icon_size = 54
 max_icon_size = 80
-icon_path = /home/redox/.local/share/icons/Tela-circle-solarized/symbolic/apps/:/home/redox/.local/share/icons/Tela-circle-solarized/symbolic/status:/home/redox/.local/share/icons/Tela-circle-solarized/symbolic/places:/home/redox/.local/share/icons/Tela-circle-solarized/symbolic/actions/:/home/redox/.local/share/icons/Tela-circle-solarized/symbolic/mimetypes/
+# icon_path = /home/redox/.local/share/icons/Tela-circle-solarized/symbolic/apps/:/home/redox/.local/share/icons/Tela-circle-solarized/symbolic/status:/home/redox/.local/share/icons/Tela-circle-solarized/symbolic/places:/home/redox/.local/share/icons/Tela-circle-solarized/symbolic/actions/:/home/redox/.local/share/icons/Tela-circle-solarized/symbolic/mimetypes/
+icon_path = /home/redox/.local/share/icons/kora/actions/16/:/home/redox/.local/share/icons/kora/status/scalable/:/home/redox/.local/share/icons/kora/apps/symbolic/:/home/redox/.local/share/icons/kora/places/symbolic/
+
 icon_corner_radius = 4
 # Misc/Advanced
 dmenu = rofi --show drun --prompt 'Open with'

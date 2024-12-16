@@ -4,7 +4,10 @@ local map = vim.keymap.set
 -- Replace hex with HSL
 map("n", "<leader>rh", function()
   require("redox.hsl").replaceHexWithHSL()
-end)
+end, { desc = "Replace Hex with HSL" })
+map("n", "<leader>rr", function()
+  require("redox.hsl").replaceHSLtoHex()
+end, { desc = "Replace HSL with Hex" })
 
 -- Enter to add spaces
 map("n", "<CR>", "o<Esc>", opts)

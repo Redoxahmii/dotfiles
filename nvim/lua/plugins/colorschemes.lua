@@ -32,7 +32,7 @@ return {
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = true,
-    dev = false,
+    dev = true,
     -- opts = {
     --   styles = {
     --     sidebars = "transparent",
@@ -44,7 +44,7 @@ return {
       require("solarized-osaka").setup({
         styles = {
           sidebars = "transparent",
-          -- floats = "transparent",
+          floats = "transparent",
         },
         on_highlights = function(hl, c)
           local util = require("solarized-osaka.util")

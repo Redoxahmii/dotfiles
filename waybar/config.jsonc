@@ -82,7 +82,7 @@
     "format-charging": " {capacity}%  <span></span>",
     "format-icons": ["", "", "", "", ""],
     "interval": 15,
-    "on-click": "./scripts/waybar-battery.sh"
+    "on-click": "$HOME/.config/waybar/scripts/waybar-battery.sh"
   },
   "network": {
     // "interface": "wlp2s0", // (Optional) To force the use of this interface
