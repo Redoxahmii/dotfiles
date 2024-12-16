@@ -24,6 +24,15 @@
 ### Neovim and Kitty
 ![image](https://github.com/user-attachments/assets/ceb26e9c-65f1-45ce-ad2c-7559da8d05db)
 
+![image](https://github.com/user-attachments/assets/2e51f1bc-66e7-4a53-a2ca-93601de0008c)
+
+![image](https://github.com/user-attachments/assets/d922487b-bb25-4a83-9a74-4d3b020f4325)
+
+### Tmux
+
+![image](https://github.com/user-attachments/assets/c5cc9a29-8957-4544-87cf-bc72188907cb)
+
+
 ### Dunst
 ![image](https://github.com/user-attachments/assets/72a43bf8-dc64-4320-98c8-9f27ec51c9aa)
 
