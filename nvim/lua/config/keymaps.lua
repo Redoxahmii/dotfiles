@@ -40,3 +40,6 @@ map("n", "<C-u>", "<C-u>zz", opts)
 -- find and center
 map("n", "n", "nzzzv", opts)
 map("n", "N", "Nzzzv", opts)
+
+-- use escape to go out in temrinal
+map("t", "<Esc>", "<C-\\><C-n>", opts)
