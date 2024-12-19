@@ -1,3 +1,7 @@
+git:
+  paging:
+    colorArg: always
+    useConfig: true
 customCommands:
   - key: "C"
     command: "git cz"
