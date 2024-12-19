@@ -43,20 +43,69 @@ return {
         },
         sections = {
           { section = "header", padding = 1, align = "center" },
-          -- {
-          --   pane = 2,
-          --   icon = " ",
-          --   title = "Todos",
-          --   section = "terminal",
-          --   indent = 2,
-          --   height = 10,
-          --   cmd = 'bat --plain --theme "Solarized (dark)" ~/Code/Obsidian/daily.md',
-          --   padding = 3,
-          -- },
           { icon = " ", title = "Recent Files", section = "recent_files", limit = 4, padding = 1 },
           { section = "keys", gap = 1, padding = 1 },
+          {
+            pane = 2,
+            icon = " ",
+            desc = "Browse Repo",
+            key = "b",
+            action = function()
+              Snacks.gitbrowse()
+            end,
+          },
+          function()
+            local in_git = Snacks.git.get_root() ~= nil
+            local cmds = {
+              {
+                title = "Notifications",
+                cmd = "gh notify -s -a -n5",
+                action = function()
+                  vim.ui.open("https://github.com/notifications")
+                end,
+                key = "n",
+                icon = " ",
+                height = 5,
+                enabled = true,
+              },
+              {
+                title = "Open Issues",
+                cmd = "gh issue list -L 3",
+                key = "i",
+                action = function()
+                  vim.fn.jobstart("gh issue list --web", { detach = true })
+                end,
+                icon = " ",
+                height = 7,
+              },
+              {
+                icon = " ",
+                title = "Open PRs",
+                cmd = "gh pr list -L 3",
+                key = "p",
+                action = function()
+                  vim.fn.jobstart("gh pr list --web", { detach = true })
+                end,
+                height = 7,
+              },
+              {
+                icon = " ",
+                title = "Git Status",
+                cmd = "git --no-pager diff --stat -B -M -C",
+                height = 8,
+              },
+            }
+            return vim.tbl_map(function(cmd)
+              return vim.tbl_extend("force", {
+                pane = 2,
+                section = "terminal",
+                enabled = in_git,
+                ttl = 5 * 60,
+                indent = 3,
+              }, cmd)
+            end, cmds)
+          end,
           { section = "startup" },
-          -- { pane = 2, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
         },
       },
     },

@@ -1,3 +1,0 @@
-{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qx \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q: Register a new customer.\\E$"}
-{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QComplaints Management:(Unclear at the moment)\\E$"}
-{"rule":"PHRASE_REPETITION","sentence":"^\\QCustomer Flow\nCustomer Frontend Flow\nCustomer Backend Flow\nCustomer Schema\nCard Schema\nPrint Job Schema\nAPIs for Customer Flow\nPrint Agent Flow\nPrint Agent Frontend Flow\nPrint Agent Backend Flow\nPrint Agent Schema\nPrint Job Schema\nAPIs for Print Agent Flow\nAdmin Flow\nAdmin Frontend Flow\nAdmin Backend Flow\nAdmin Schema\nLocation Schema\nAPIs for Admin Flow\nGeneral Notes\\E$"}

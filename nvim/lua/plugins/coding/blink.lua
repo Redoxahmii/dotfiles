@@ -4,12 +4,12 @@ return {
     --@module 'blink.cmp'
     --@type blink.cmp.Config
     opts = {
-      fuzzy = {
-        sorts = { "kind", "label", "score" },
-      },
+      -- fuzzy = {
+      --   sorts = { "kind", "label", "score" },
+      -- },
       completion = {
         menu = {
-          -- scrollbar = true,
+          auto_show = true,
           draw = {
             treesitter = false,
             columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
@@ -19,8 +19,11 @@ return {
           selection = "preselect",
         },
         trigger = {
-          prefetch_on_insert = true,
-          show_on_trigger_character = false,
+          -- prefetch_on_insert = true,
+          -- show_on_accept_on_trigger_character = false,
+          -- show_on_insert_on_trigger_character = false,
+          show_on_x_blocked_trigger_characters = { "'", '"', "(", ">", ",", "{" },
+          -- show_on_trigger_character = false,
         },
         documentation = {
           auto_show = true,

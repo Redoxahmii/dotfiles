@@ -42,7 +42,7 @@ return {
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require("solarized-osaka").setup({
-        -- transparent = false,
+        transparent = true,
         styles = {
           sidebars = "transparent",
           floats = "transparent",
@@ -61,7 +61,6 @@ return {
           hl.CursorLineNr = { fg = c.cyan500 }
           hl.LineNrAbove = { fg = c.orange700 }
           hl.LineNrBelow = { fg = c.orange700 }
-          -- BlinkCmpMenu = { fg = c.base01, bg = c.none },
         end,
       })
     end,
