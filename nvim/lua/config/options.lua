@@ -1,3 +1,4 @@
+require("redox.nice").set_shada()
 vim.opt.scrolloff = 10
 vim.opt.showmode = false
 vim.g.leader = " "
@@ -9,12 +10,7 @@ vim.opt.wildignore:append({ "*/node_modules/*" })
 -- vim.opt.listchars = { tab = "» ", trail = "·", eol = "↲" }
 
 -- INFO: project-specific global marks
-local project_dir = vim.fn.stdpath("data") .. "/myshada/" .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
-if vim.fn.isdirectory(project_dir) == 0 then
-  vim.fn.mkdir(project_dir, "p")
-end
-local shadafile = project_dir .. "/" .. vim.fn.sha256(vim.fn.getcwd()):sub(1, 8) .. ".shada"
-vim.opt.shadafile = shadafile
+
 -- local function get_buffer_name()
 --   local buffer_path = vim.api.nvim_buf_get_name(0)
 --

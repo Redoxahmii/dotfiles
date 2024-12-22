@@ -8,15 +8,14 @@ return {
       ---@diagnostic disable-next-line: missing-fields
       require("tokyonight").setup({
         -- transparent = true,
-        style = "night",
-        -- styles = {
-        --   sidebars = "transparent",
-        --   floats = "transparent",
-        -- },
-        -- on_highlights = function(hl, c)
-        --   hl.LineNrAbove = { fg = c.dark5 }
-        --   hl.LineNrBelow = { fg = c.dark5 }
-        -- end,
+        styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+        },
+        on_highlights = function(hl, c)
+          hl.LineNrAbove = { fg = c.dark5 }
+          hl.LineNrBelow = { fg = c.dark5 }
+        end,
       })
     end,
   },
@@ -27,7 +26,6 @@ return {
       transparent_background = true,
     },
   },
-
   --- [INFO: Add rainbow markdown colors to solarized-osaka]
   {
     "craftzdog/solarized-osaka.nvim",
@@ -61,6 +59,7 @@ return {
           hl.CursorLineNr = { fg = c.cyan500 }
           hl.LineNrAbove = { fg = c.orange700 }
           hl.LineNrBelow = { fg = c.orange700 }
+          hl.BlinkCmpMenu = { fg = c.base01, bg = c.none }
         end,
       })
     end,
